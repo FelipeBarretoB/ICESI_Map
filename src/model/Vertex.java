@@ -1,18 +1,30 @@
 package model;
 
-public class Vertex {
-	private int weight;
+public class Vertex<T> {
+	private T value;
+	private String properties;
 	
-	public Vertex() {
-		
+	public Vertex(T val, String prop) {
+		this.value = val;
+		this.properties = prop;
 	}
 
-	public int getWeight() {
-		return weight;
+	public T getValue() {
+		return value;
 	}
 
-	public void setWeight(int weight) {
-		this.weight = weight;
+	public void setValue(T value) {
+		this.value = value;
 	}
+
+	public String getProperties() {
+		return properties;
+	}
+
+	public void setProperties(String properties) {
+		this.properties = properties;
+	}
+	
+	
 	
 }
