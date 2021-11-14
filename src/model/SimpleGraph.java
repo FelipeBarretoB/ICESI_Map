@@ -1,14 +1,13 @@
 package model;
 
-public class SimpleGraph extends Graph{
+public class SimpleGraph<T> extends Graph<T>{
 	
 	public SimpleGraph() {
 		super();
 	}
 	
 	@Override
-	public void addVertex(Vertex v) {
-		v.setWeight(1);
+	public void addVertex(Vertex<T> v) {
 		getNodes().add(v);
 	}
 	

@@ -2,40 +2,40 @@ package model;
 
 import java.util.ArrayList;
 
-public abstract class Graph {
-	private ArrayList<Vertex> nodes;
-	private ArrayList<Edge> edges;
+public abstract class Graph<T> {
+	private ArrayList<Vertex<T>> nodes;
+	private ArrayList<Edge<T>> edges;
 	
 	public Graph() {
-		nodes = new ArrayList<Vertex>();
-		edges = new ArrayList<Edge>();
+		nodes = new ArrayList<Vertex<T>>();
+		edges = new ArrayList<Edge<T>>();
 	}
 	
-	public ArrayList<Vertex> getNodes() {
+	public ArrayList<Vertex<T>> getNodes() {
 		return nodes;
 	}
 	
-	public void setNodes(ArrayList<Vertex> nodes) {
+	public void setNodes(ArrayList<Vertex<T>> nodes) {
 		this.nodes = nodes;
 	}
 	
-	public ArrayList<Edge> getEdges() {
+	public ArrayList<Edge<T>> getEdges() {
 		return edges;
 	}
 	
-	public void setEdges(ArrayList<Edge> edges) {
+	public void setEdges(ArrayList<Edge<T>> edges) {
 		this.edges = edges;
 	}
 	
-	public void addVertex(Vertex v) {
+	public void addVertex(Vertex<T> v) {
 		nodes.add(v);
 	}
 	
-	public void addEdge(Edge e) {
+	public void addEdge(Edge<T> e) {
 		edges.add(e);
 	}
 	
-	public void BFS(Vertex init) {
+	public void BFS(Vertex<T> init) {
 		
 	}
 	
@@ -43,7 +43,7 @@ public abstract class Graph {
 		
 	}
 	
-	public void Djikstra(Vertex init, Vertex end) {
+	public void Djikstra(Vertex<T> init, Vertex<T> end) {
 		
 	}
 	

@@ -1,12 +1,12 @@
 package model;
 
-public class Edge {
+public class Edge<T> {
 	
 	private int weight;
-	private Vertex origin;
-	private Vertex destiny;
+	private Vertex<T> origin;
+	private Vertex<T> destiny;
 	
-	public Edge(int w, Vertex o, Vertex d) {
+	public Edge(int w, Vertex<T> o, Vertex<T> d) {
 		this.weight = w;
 		this.origin = o;
 		this.destiny = d;
@@ -20,19 +20,19 @@ public class Edge {
 		this.weight = weight;
 	}
 
-	public Vertex getOrigin() {
+	public Vertex<T> getOrigin() {
 		return origin;
 	}
 
-	public void setOrigin(Vertex origin) {
+	public void setOrigin(Vertex<T> origin) {
 		this.origin = origin;
 	}
 
-	public Vertex getDestiny() {
+	public Vertex<T> getDestiny() {
 		return destiny;
 	}
 
-	public void setDestiny(Vertex destiny) {
+	public void setDestiny(Vertex<T> destiny) {
 		this.destiny = destiny;
 	}
 	
