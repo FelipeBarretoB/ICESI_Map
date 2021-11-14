@@ -25,6 +25,11 @@ public class Vertex<T> {
 		this.properties = properties;
 	}
 	
+	@Override
+	public String toString() {
+		return getValue() + "";
+	}
+	
 	
 	
 }

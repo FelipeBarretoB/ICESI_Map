@@ -36,6 +36,11 @@ public class Edge<T> {
 		this.destiny = destiny;
 	}
 	
+	@Override
+	public String toString() {
+		return weight + " / " + origin.toString() + " / " + destiny.toString(); 
+	}
+	
 	
 	
 }
