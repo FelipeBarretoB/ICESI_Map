@@ -2,17 +2,17 @@ package model;
 
 public class Edge<T> {
 	
-	private int weight;
+	private double weight;
 	private Vertex<T> origin;
 	private Vertex<T> destiny;
 	
-	public Edge(int w, Vertex<T> o, Vertex<T> d) {
+	public Edge(double w, Vertex<T> o, Vertex<T> d) {
 		this.weight = w;
 		this.origin = o;
 		this.destiny = d;
 	}
 
-	public int getWeight() {
+	public double getWeight() {
 		return weight;
 	}
 

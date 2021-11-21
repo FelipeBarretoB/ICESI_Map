@@ -10,7 +10,7 @@ public class Vertex<T> {
 	private int d;
 	private int f;
 	private ArrayList<Vertex<T>> adjacents;
-	private int dist;
+	private double dist;
 	
 	public Vertex(T val, String prop) {
 		this.value = val;
@@ -78,11 +78,11 @@ public class Vertex<T> {
 		this.f = f;
 	}
 
-	public int getDist() {
+	public double getDist() {
 		return dist;
 	}
 
-	public void setDist(int dist) {
+	public void setDist(double dist) {
 		this.dist = dist;
 	}
 	

@@ -113,7 +113,7 @@ public abstract class Graph<T> {
 		while (!queue.isEmpty()) {
 			Vertex<T> u = queue.poll();
 			for (Vertex<T> v: u.getAdjacents()) {
-				int alt = u.getDist() + length(u, v);
+				double alt = u.getDist() + length(u, v);
 				if (alt < v.getDist()) {
 					v.setDist(alt);
 					v.setPre(u);
@@ -125,8 +125,8 @@ public abstract class Graph<T> {
 		// TODO return dist, prev
 	}
 	
-	public int length(Vertex<T> u, Vertex<T> v) {
-		int dist = Integer.MAX_VALUE;
+	public double length(Vertex<T> u, Vertex<T> v) {
+		double dist = Integer.MAX_VALUE;
 		boolean found = false;
 		for (int i = 0; i < edges.size() && !found; i++) {
 			Edge<T> e = edges.get(i);
