@@ -10,5 +10,4 @@ public class SimpleGraph<T> extends Graph<T>{
 	public void addVertex(Vertex<T> v) {
 		getNodes().add(v);
 	}
-	
 }

@@ -400,6 +400,7 @@ public class IcesiMap {
 		g.getNodes().remove(30);
 		g.getNodes().remove(44);
 	}
+	
 	public void createIcesiSimpleWeightedMap() {
 		w = new SimpleWeightedGraph<>();
 		Vertex<Integer> v = new Vertex<>(0, "null");
@@ -796,4 +797,5 @@ public class IcesiMap {
 			w.getNodes().remove(44);
 		}
 	}
+
 }
