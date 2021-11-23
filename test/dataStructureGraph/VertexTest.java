@@ -10,13 +10,13 @@ class VertexTest {
 	private Vertex<Integer> vertex;
 	
 	
-	public void setupScenario() {
+	public void setupScenario1() {
 		vertex = new Vertex<Integer>(5,"a");
 	}
 	
 	@Test
 	public void testConstructor() {
-		setupScenario();
+		setupScenario1();
 		assertEquals(vertex.getValue(), 5);
 		assertEquals(vertex.getProperties(), "a");
 	}
