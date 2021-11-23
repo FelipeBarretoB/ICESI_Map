@@ -1,5 +1,10 @@
 package model;
 
+import dataStructureGraph.Edge;
+import dataStructureGraph.SimpleGraph;
+import dataStructureGraph.SimpleWeightedGraph;
+import dataStructureGraph.Vertex;
+
 public class IcesiMap {
 
 	private SimpleGraph<Integer> g;

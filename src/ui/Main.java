@@ -1,8 +1,8 @@
 package ui;
 
-import model.Edge;
-import model.SimpleGraph;
-import model.Vertex;
+import dataStructureGraph.Edge;
+import dataStructureGraph.SimpleGraph;
+import dataStructureGraph.Vertex;
 
 public class Main {
 	private SimpleGraph<Integer> g;

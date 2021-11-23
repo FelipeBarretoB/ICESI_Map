@@ -1,4 +1,4 @@
-package model;
+package dataStructureGraph;
 
 public class Edge<T> {
 	
