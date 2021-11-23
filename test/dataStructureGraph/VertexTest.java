@@ -1,10 +1,9 @@
-package model;
+package dataStructureGraph;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import dataStructureGraph.Vertex;
 
 class VertexTest {
 
