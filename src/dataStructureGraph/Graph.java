@@ -8,6 +8,7 @@ import java.util.Queue;
 public abstract class Graph<T> {
 	private ArrayList<Vertex<T>> nodes;
 	private ArrayList<Edge<T>> edges;
+	private double[][] distances;
 	
 	public Graph() {
 		nodes = new ArrayList<Vertex<T>>();
@@ -96,7 +97,7 @@ public abstract class Graph<T> {
 		u.setF(time);
 	}
 	
-	public ArrayList<Vertex> Djikstra(Vertex<T> init, Vertex<T> end) {
+	public ArrayList<Vertex<T>> Djikstra(Vertex<T> init, Vertex<T> end) {
 		init.setDist(0);
 		
 		PriorityQueue<Vertex<T>> queue = new PriorityQueue<>();
@@ -140,21 +141,44 @@ public abstract class Graph<T> {
 		return dist;
 	}
 	
-	public ArrayList<ArrayList<Vertex>> FloydWarshall(Vertex<T> x) {
-		// We need to make an array of Dist
-		for (Vertex<T> v : nodes) {
-			//v.setDist(0);
-			//TODO not sure 'bout this one
+	// TODO
+	// Es una  busqueda lineal, podríamos intentar busquedas más rápidas
+	// Si se hace sort, etc.
+	public int returnPos(Vertex<T> v) {
+		boolean found = false;
+		int index = 0;
+		for (int i = 0; i < nodes.size() && !found; i++) {
+			if (nodes.get(i) == v) {
+				index = i;
+				found = true;
+			}
 		}
+		return index;
+	}
+	
+	public ArrayList<ArrayList<Vertex<T>>> FloydWarshall(Vertex<T> x) {
+		
+		distances = new double[nodes.size()][nodes.size()];
+		for (int i = 0; i < nodes.size(); i++) {
+			for (int j = 0; j < nodes.size(); j++) {
+				if (i == j) {
+					distances[i][j] = 0;
+				} else {
+					distances[i][j] = Double.MAX_VALUE;
+				}
+			}
+		}
+		
 		for (Edge<T> e : edges) {
-			Vertex<T> u = e.getOrigin();
-			// dist[u][v] <- weight of the edge
+			distances[returnPos(e.getOrigin())][returnPos(e.getDestiny())] = e.getWeight();
 		}
 		
 		for (int k = 0; k < nodes.size(); k++) {
 			for (int i = 0; i < nodes.size(); i++) {
 				for (int j = 0; j < nodes.size(); j++) {
-					
+					if (distances[i][j] > distances[i][k] + distances[k][j]) {
+						distances[i][j] = distances[i][k] + distances[k][j];
+					}
 				}
 			}
 		}

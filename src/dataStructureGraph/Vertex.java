@@ -11,7 +11,7 @@ public class Vertex<T> {
 	private int f;
 	private ArrayList<Vertex<T>> adjacents;
 	private double dist;
-	private ArrayList<Vertex<T>> minDist;
+	private ArrayList<Integer> minDist;
 	
 	public Vertex(T val, String prop) {
 		this.value = val;
@@ -87,5 +87,15 @@ public class Vertex<T> {
 	public void setDist(double dist) {
 		this.dist = dist;
 	}
+
+	public ArrayList<Integer> getMinDist() {
+		return minDist;
+	}
+
+	public void setMinDist(ArrayList<Integer> minDist) {
+		this.minDist = minDist;
+	}
+	
+	
 	
 }
