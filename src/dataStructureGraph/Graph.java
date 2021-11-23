@@ -140,7 +140,7 @@ public abstract class Graph<T> {
 		return dist;
 	}
 	
-	public void FloydWarshall() {
+	public ArrayList<ArrayList<Vertex>> FloydWarshall(Vertex<T> x) {
 		// We need to make an array of Dist
 		for (Vertex<T> v : nodes) {
 			//v.setDist(0);
@@ -158,5 +158,7 @@ public abstract class Graph<T> {
 				}
 			}
 		}
+		
+		return null;
 	}
 }
