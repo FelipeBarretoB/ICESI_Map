@@ -96,7 +96,7 @@ public abstract class Graph<T> {
 		u.setF(time);
 	}
 	
-	public void Djikstra(Vertex<T> init, Vertex<T> end) {
+	public ArrayList<Vertex> Djikstra(Vertex<T> init, Vertex<T> end) {
 		init.setDist(0);
 		
 		PriorityQueue<Vertex<T>> queue = new PriorityQueue<>();
@@ -122,7 +122,7 @@ public abstract class Graph<T> {
 			}
 		}
 		
-		// TODO return dist, prev
+		return null;
 	}
 	
 	public double length(Vertex<T> u, Vertex<T> v) {
