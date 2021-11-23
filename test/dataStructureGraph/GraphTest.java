@@ -12,7 +12,6 @@ class GraphTest {
 	private ArrayList<ArrayList<Vertex>> ans;
 	
 	void setupScenario1() {
-		
 	}
 	
 	void setupScenario2() {
