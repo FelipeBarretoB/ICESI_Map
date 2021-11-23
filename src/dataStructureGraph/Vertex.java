@@ -11,10 +11,12 @@ public class Vertex<T> {
 	private int f;
 	private ArrayList<Vertex<T>> adjacents;
 	private double dist;
+	private ArrayList<Vertex<T>> minDist;
 	
 	public Vertex(T val, String prop) {
 		this.value = val;
 		this.properties = prop;
+		minDist = null;
 	}
 
 	public T getValue() {
@@ -85,7 +87,5 @@ public class Vertex<T> {
 	public void setDist(double dist) {
 		this.dist = dist;
 	}
-	
-	
 	
 }

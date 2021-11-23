@@ -41,6 +41,4 @@ public class Edge<T> {
 		return weight + " / " + origin.toString() + " / " + destiny.toString(); 
 	}
 	
-	
-	
 }

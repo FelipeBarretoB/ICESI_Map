@@ -141,6 +141,22 @@ public abstract class Graph<T> {
 	}
 	
 	public void FloydWarshall() {
+		// We need to make an array of Dist
+		for (Vertex<T> v : nodes) {
+			//v.setDist(0);
+			//TODO not sure 'bout this one
+		}
+		for (Edge<T> e : edges) {
+			Vertex<T> u = e.getOrigin();
+			// dist[u][v] <- weight of the edge
+		}
 		
+		for (int k = 0; k < nodes.size(); k++) {
+			for (int i = 0; i < nodes.size(); i++) {
+				for (int j = 0; j < nodes.size(); j++) {
+					
+				}
+			}
+		}
 	}
 }
