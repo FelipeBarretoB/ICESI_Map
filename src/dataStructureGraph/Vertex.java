@@ -18,6 +18,16 @@ public class Vertex<T> {
 		this.properties = prop;
 		minDist = null;
 	}
+	
+	public void removeAdjacent(Vertex<T> v) {
+		boolean found = false;
+		for (int i = 0; i < adjacents.size() && !found; i++) {
+			if (v == adjacents.get(i)) {
+				found = true;
+				adjacents.remove(i);
+			}
+		}
+	}
 
 	public T getValue() {
 		return value;

@@ -40,6 +40,38 @@ public abstract class Graph<T> {
 		edges.add(e);
 	}
 	
+	public Vertex<T> deleteVertex(T el) {
+		boolean found = false;
+		// Find Vertex to Delete
+		Vertex<T> toFind = null;
+		for (int i = 0; i < nodes.size() && !found; i++) {
+			Vertex<T> v = nodes.get(i);
+			if (v.getValue() == el) {
+				found = true;
+				nodes.remove(i);
+				toFind = v;
+			}
+		}
+		
+		// Remove adjacents
+		for (Vertex<T> v : toFind.getAdjacents()) {
+			v.removeAdjacent(toFind);
+		}
+		toFind.setAdjacents(null);
+		
+		// Remove edges
+		for (int i = 0; i < edges.size(); i++) {
+			Edge<T> e = edges.get(i);
+			if (toFind == e.getOrigin() || toFind == e.getDestiny()) {
+				edges.remove(i);
+			}
+		}
+		
+		toFind.setPre(null);
+		
+		return toFind;
+	}
+	
 	public void BFS(Vertex<T> init) {
 		for (int i = 0; i < nodes.size(); i++) {
 			Vertex<T> u  = nodes.get(i);
