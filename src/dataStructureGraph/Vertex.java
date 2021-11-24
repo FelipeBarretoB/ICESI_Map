@@ -17,6 +17,7 @@ public class Vertex<T> {
 		this.value = val;
 		this.properties = prop;
 		minDist = null;
+		adjacents = new ArrayList<Vertex<T>>();
 	}
 	
 	public void removeAdjacent(Vertex<T> v) {
@@ -49,6 +50,11 @@ public class Vertex<T> {
 	public String toString() {
 		return getValue() + "";
 	}
+	
+	/*@Override
+	public String toString() {
+		return getDist() + "";
+	}*/
 	
 	public void setColor(Color color) {
 		this.color = color;

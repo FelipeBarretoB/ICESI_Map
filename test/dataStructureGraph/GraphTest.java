@@ -97,12 +97,12 @@ class GraphTest {
 		ArrayList<Vertex<Integer>> path = graph.Djikstra(graph.getNodes().get(0), graph.getNodes().get(4));
 		
 		assertEquals(path.get(0), graph.getNodes().get(0));
-		assertEquals(path.get(1), graph.getNodes().get(2));
+		assertEquals(path.get(1), graph.getNodes().get(1));
 		assertEquals(path.get(2), graph.getNodes().get(4));
 	}
 	
 	@Test
-	public void testLenght() {
+	public void testLength() {
 		
 	}
 	

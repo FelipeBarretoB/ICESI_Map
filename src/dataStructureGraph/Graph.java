@@ -2,14 +2,19 @@ package dataStructureGraph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
+
+import model.VertexComparator;
 
 public abstract class Graph<T> {
 	private ArrayList<Vertex<T>> nodes;
 	private ArrayList<Edge<T>> edges;
 	private double[][] distances;
+	private VertexComparator<T> vc;
 	
 	public Graph() {
 		nodes = new ArrayList<Vertex<T>>();
@@ -38,6 +43,8 @@ public abstract class Graph<T> {
 	
 	public void addEdge(Edge<T> e) {
 		edges.add(e);
+		e.getOrigin().getAdjacents().add(e.getDestiny());
+		e.getDestiny().getAdjacents().add(e.getOrigin());
 	}
 	
 	public Vertex<T> deleteVertex(T el) {
@@ -134,39 +141,59 @@ public abstract class Graph<T> {
 		init.setDist(0);
 		
 		PriorityQueue<Vertex<T>> queue = new PriorityQueue<>();
-		
+		ArrayList<Vertex<T>> queueTwo = new ArrayList<>();
+		ArrayList<Vertex<T>> result = new ArrayList<>();
+		queueTwo.add(init);
 		for (Vertex<T> v : nodes) {
 			if (v != init) {
 				v.setDist(Integer.MAX_VALUE);
 			}
 			v.setPre(null);
 			// TODO This doesn't has priority as it's not reading by the dist
-			queue.add(v);
+			//queue.add(v);
+			if (v != init) {				
+				queueTwo.add(v);
+			}
 		}
 		
-		while (!queue.isEmpty()) {
-			Vertex<T> u = queue.poll();
+		while (!queueTwo.isEmpty()) {
+			Vertex<T> u = queueTwo.get(0);
 			for (Vertex<T> v: u.getAdjacents()) {
 				double alt = u.getDist() + length(u, v);
 				if (alt < v.getDist()) {
 					v.setDist(alt);
 					v.setPre(u);
+					/*vc = new VertexComparator<>();
+					System.out.println(queueTwo);
+					//queueTwo.remove(0);
+					result.add(queueTwo.remove(0));
+					Collections.sort(queueTwo, vc);
+					System.out.println(queueTwo);*/
 					// TODO Q.decrease_priority(v, alt)
-				}
+				} /*else if (alt > v.getDist() && queueTwo.size() == 1) {
+					result.add(queueTwo.remove(0));
+				}*/
 			}
+			vc = new VertexComparator<>();
+			System.out.println(queueTwo);
+			//queueTwo.remove(0);
+			result.add(queueTwo.remove(0));
+			Collections.sort(queueTwo, vc);
+			System.out.println(queueTwo);
+			//System.out.println(queueTwo);
 		}
 		
-		return null;
+		return result;
 	}
 	
 	public double length(Vertex<T> u, Vertex<T> v) {
 		double dist = Integer.MAX_VALUE;
-		boolean found = false;
-		for (int i = 0; i < edges.size() && !found; i++) {
+		//boolean found = false;
+		for (int i = 0; i < edges.size() /*&& !found*/; i++) {
 			Edge<T> e = edges.get(i);
 			// TODO We need to make it so it doesn't matter the origin or destiny
-			if (e.getOrigin() == u && e.getDestiny() == v || (e.getOrigin() == v && e.getDestiny() == u)) {
-				found = true;
+			if (e.getOrigin() == u && e.getDestiny() == v || (e.getOrigin() == v && e.getDestiny() == u) && e.getWeight() < dist) {
+				//found = true;
 				dist = e.getWeight();
 			}
 		}
