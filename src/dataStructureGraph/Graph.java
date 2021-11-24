@@ -1,6 +1,7 @@
 package dataStructureGraph;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -156,7 +157,7 @@ public abstract class Graph<T> {
 		return index;
 	}
 	
-	public ArrayList<ArrayList<Vertex<T>>> FloydWarshall(Vertex<T> x) {
+	public double[][] FloydWarshall() {
 		
 		distances = new double[nodes.size()][nodes.size()];
 		for (int i = 0; i < nodes.size(); i++) {
@@ -164,14 +165,27 @@ public abstract class Graph<T> {
 				if (i == j) {
 					distances[i][j] = 0;
 				} else {
-					distances[i][j] = Double.MAX_VALUE;
+					distances[i][j] = Integer.MAX_VALUE;
 				}
 			}
 		}
 		
 		for (Edge<T> e : edges) {
-			distances[returnPos(e.getOrigin())][returnPos(e.getDestiny())] = e.getWeight();
+			int posOne = returnPos(e.getOrigin());
+			int posTwo = returnPos(e.getDestiny());
+			distances[posOne][posTwo] = e.getWeight();
+			distances[posTwo][posOne] = e.getWeight();
+			/*System.out.println(e.getWeight() + " - [" + posOne + "][" + posTwo + "]" );*/
 		}
+		
+		/*String print = "";
+		for (int i = 0; i < distances.length; i++) {
+			for (int j = 0; j < distances[0].length; j++) {
+				print += distances[i][j] + " | ";
+			}
+			print += "\n";
+		}
+		System.out.println(print);*/
 		
 		for (int k = 0; k < nodes.size(); k++) {
 			for (int i = 0; i < nodes.size(); i++) {
@@ -183,6 +197,15 @@ public abstract class Graph<T> {
 			}
 		}
 		
-		return null;
+		/*print = "";
+		for (int i = 0; i < distances.length; i++) {
+			for (int j = 0; j < distances[0].length; j++) {
+				print += distances[i][j] + " | ";
+			}
+			print += "\n";
+		}
+		System.out.println("\n" + print);*/
+		
+		return distances;
 	}
 }
