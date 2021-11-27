@@ -2,3 +2,6 @@ Usar interfaz de dmi para cada caso
 
 Hacer un sistema de mapas con coordenadas que lea de un excel
 
+JGraph
+
+librerías de canvas o para dibujar grafos

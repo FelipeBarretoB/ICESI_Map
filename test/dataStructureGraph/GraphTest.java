@@ -12,6 +12,7 @@ class GraphTest {
 	private ArrayList<ArrayList<Vertex>> ans;
 	
 	void setupScenario1() {
+		graph = new SimpleGraph<>();
 	}
 	
 	void setupScenario2() {
@@ -78,6 +79,28 @@ class GraphTest {
 	}
 	
 	@Test
+	public void testAddVertex() {
+		setupScenario1();
+		Vertex<Integer> v = new Vertex<Integer>(2,"a");
+		graph.addVertex(v);
+		assertEquals(v, graph.getNodes().get(graph.getNodes().size() - 1));
+	}
+	
+	@Test
+	public void testAddEdge() {
+		setupScenario1();
+		Edge<Integer> v = new Edge<Integer>(2,new Vertex<Integer>(2,"a"),new Vertex<Integer>(4,"b"));
+		graph.addEdge(v);
+		assertEquals(v, graph.getEdges().get(graph.getEdges().size() - 1));
+	}
+	
+	@Test
+	public void testDeleteVertex() {
+		setupScenario2();
+		graph.deleteVertex(0);
+		assertEquals(graph.getNodes().get(0).getValue(),1);
+	}
+	
 	public void testBFS() {
 		
 	}
@@ -91,10 +114,10 @@ class GraphTest {
 	}
 	
 	@Test
-	public void testDjikstra() {
+	public void testDijkstra() {
 		setupScenario2();
 		// TODO This Patch of Putting "Integer" is temporal
-		ArrayList<Vertex<Integer>> path = graph.Djikstra(graph.getNodes().get(0), graph.getNodes().get(4));
+		ArrayList<Vertex<Integer>> path = graph.dijkstra(graph.getNodes().get(0), graph.getNodes().get(4));
 		
 		assertEquals(path.get(0), graph.getNodes().get(0));
 		assertEquals(path.get(1), graph.getNodes().get(1));
@@ -173,7 +196,7 @@ class GraphTest {
 		}
 		
 		assertTrue(test);*/
-		double[][] path = graph.FloydWarshall();
+		double[][] path = graph.floydWarshall();
 		boolean error = false;
 		for (int i = 0; i < path.length && !error; i++) {
 			for (int j = 0; j < path[0].length && !error; j++) {

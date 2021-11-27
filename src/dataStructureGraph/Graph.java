@@ -137,7 +137,7 @@ public abstract class Graph<T> {
 		u.setF(time);
 	}
 	
-	public ArrayList<Vertex<T>> Djikstra(Vertex<T> init, Vertex<T> end) {
+	public ArrayList<Vertex<T>> dijkstra(Vertex<T> init, Vertex<T> end) {
 		init.setDist(0);
 		
 		PriorityQueue<Vertex<T>> queue = new PriorityQueue<>();
@@ -175,11 +175,11 @@ public abstract class Graph<T> {
 				}*/
 			}
 			vc = new VertexComparator<>();
-			System.out.println(queueTwo);
+			//System.out.println(queueTwo);
 			//queueTwo.remove(0);
 			result.add(queueTwo.remove(0));
 			Collections.sort(queueTwo, vc);
-			System.out.println(queueTwo);
+			//System.out.println(queueTwo);
 			//System.out.println(queueTwo);
 		}
 		
@@ -216,7 +216,7 @@ public abstract class Graph<T> {
 		return index;
 	}
 	
-	public double[][] FloydWarshall() {
+	public double[][] floydWarshall() {
 		
 		distances = new double[nodes.size()][nodes.size()];
 		for (int i = 0; i < nodes.size(); i++) {
@@ -256,14 +256,14 @@ public abstract class Graph<T> {
 			}
 		}
 		
-		/*print = "";
+		String print = "";
 		for (int i = 0; i < distances.length; i++) {
 			for (int j = 0; j < distances[0].length; j++) {
 				print += distances[i][j] + " | ";
 			}
 			print += "\n";
 		}
-		System.out.println("\n" + print);*/
+		System.out.println("\n" + print);
 		
 		return distances;
 	}
