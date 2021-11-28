@@ -51,7 +51,7 @@ public class Main extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Main.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main_pane.fxml"));
 			fxmlLoader.setController(imGUI);
 			Parent root = fxmlLoader.load();
 			primaryStage.initStyle(StageStyle.TRANSPARENT);
