@@ -30,7 +30,7 @@ public class IcesiMap {
 			}else if(c==55) {
 				v= new Vertex<Integer>(c, "H");
 			}else if(c==57) {
-				v= new Vertex<Integer>(c, "Bienestar");
+				v= new Vertex<Integer>(c, "Bienestar (I)");
 			}else if(c==61) {
 				v= new Vertex<Integer>(c, "J");
 			}else if(c==100) {
@@ -404,6 +404,10 @@ public class IcesiMap {
 		g.getNodes().remove(0);
 		g.getNodes().remove(30);
 		g.getNodes().remove(44);
+	}
+	
+	public SimpleGraph<Integer> returnSimpleGraph() {
+		return g;
 	}
 	
 	public void createIcesiSimpleWeightedMap() {
@@ -803,4 +807,7 @@ public class IcesiMap {
 		}
 	}
 
+	public SimpleWeightedGraph<Integer> returnSimpleWeightedGraph() {
+		return w;
+	}
 }

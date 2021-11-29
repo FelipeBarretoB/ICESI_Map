@@ -117,11 +117,13 @@ class GraphTest {
 	public void testDijkstra() {
 		setupScenario2();
 		// TODO This Patch of Putting "Integer" is temporal
+		//System.out.println(graph.dijkstra(graph.getNodes().get(0), graph.getNodes().get(2)));
 		ArrayList<Vertex<Integer>> path = graph.dijkstra(graph.getNodes().get(0), graph.getNodes().get(4));
-		
 		assertEquals(path.get(0), graph.getNodes().get(0));
 		assertEquals(path.get(1), graph.getNodes().get(1));
 		assertEquals(path.get(2), graph.getNodes().get(4));
+		
+		System.out.println(path);
 	}
 	
 	@Test

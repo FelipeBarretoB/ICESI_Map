@@ -9,17 +9,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import model.IcesiMapGUI;
+import model.IcesiMap;
 
 public class Main extends Application{
 	private SimpleGraph<Integer> g;
+	private IcesiMap iMap;
 	private IcesiMapGUI imGUI;
 	private double xOffset = 0;
     private double yOffset = 0;
 	
 	public Main() {
 		g = new SimpleGraph<>();
-		imGUI = new IcesiMapGUI();
+		iMap = new IcesiMap();
+		imGUI = new IcesiMapGUI(iMap);
 	}
 	
 	public static void main(String[] args) {

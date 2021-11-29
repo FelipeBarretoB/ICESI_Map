@@ -47,6 +47,16 @@ public abstract class Graph<T> {
 		e.getDestiny().getAdjacents().add(e.getOrigin());
 	}
 	
+	public Vertex<T> searchByProp(String prop) {
+		Vertex<T> found = null;
+		for (int i = 0; i < nodes.size() && found == null; i++) {
+			if (nodes.get(i).getProperties() == prop) {
+				found = nodes.get(i);
+			}
+		}
+		return found;
+	}
+	
 	public Vertex<T> deleteVertex(T el) {
 		boolean found = false;
 		// Find Vertex to Delete
@@ -140,15 +150,20 @@ public abstract class Graph<T> {
 	public ArrayList<Vertex<T>> dijkstra(Vertex<T> init, Vertex<T> end) {
 		init.setDist(0);
 		
-		PriorityQueue<Vertex<T>> queue = new PriorityQueue<>();
+		//PriorityQueue<Vertex<T>> queueTwo = new PriorityQueue<>();
 		ArrayList<Vertex<T>> queueTwo = new ArrayList<>();
 		ArrayList<Vertex<T>> result = new ArrayList<>();
+		double[] distances = new double[nodes.size() + 3];
+		Object[] prevs = new Object[nodes.size() + 3];
 		queueTwo.add(init);
 		for (Vertex<T> v : nodes) {
 			if (v != init) {
 				v.setDist(Integer.MAX_VALUE);
+				//System.out.println(nodes.size());
+				distances[Integer.parseInt(v.getValue() + "")] = Integer.MAX_VALUE;
 			}
 			v.setPre(null);
+			prevs[Integer.parseInt(v.getValue() + "")] = null;
 			// TODO This doesn't has priority as it's not reading by the dist
 			//queue.add(v);
 			if (v != init) {				
@@ -156,32 +171,52 @@ public abstract class Graph<T> {
 			}
 		}
 		
+		boolean found = false;
 		while (!queueTwo.isEmpty()) {
-			Vertex<T> u = queueTwo.get(0);
+			Vertex<T> u = queueTwo.remove(0);
+			boolean change = false;
 			for (Vertex<T> v: u.getAdjacents()) {
 				double alt = u.getDist() + length(u, v);
 				if (alt < v.getDist()) {
 					v.setDist(alt);
 					v.setPre(u);
-					/*vc = new VertexComparator<>();
-					System.out.println(queueTwo);
+					change = true;
+					/*result.add(queueTwo.get(0));*/
+					result.add(queueTwo.get(0));
+					vc = new VertexComparator<>();
+					Collections.sort(queueTwo, vc);
+					distances[Integer.parseInt(v.getValue() + "")] = alt;
+					prevs[Integer.parseInt(v.getValue() + "")] = u;
+					/*System.out.println(queueTwo);
 					//queueTwo.remove(0);
 					result.add(queueTwo.remove(0));
-					Collections.sort(queueTwo, vc);
 					System.out.println(queueTwo);*/
 					// TODO Q.decrease_priority(v, alt)
-				} /*else if (alt > v.getDist() && queueTwo.size() == 1) {
-					result.add(queueTwo.remove(0));
-				}*/
+				}
 			}
-			vc = new VertexComparator<>();
-			//System.out.println(queueTwo);
+			System.out.println(queueTwo);
+			/*vc = new VertexComparator<>();
 			//queueTwo.remove(0);
-			result.add(queueTwo.remove(0));
-			Collections.sort(queueTwo, vc);
+			if (change) {				
+				result.add(queueTwo.get(0));
+			}
+			queueTwo.remove(0);
+			Collections.sort(queueTwo, vc);*/
 			//System.out.println(queueTwo);
 			//System.out.println(queueTwo);
 		}
+		
+		System.out.println(Arrays.toString(distances));
+		System.out.println(Arrays.toString(prevs));
+		
+		result = new ArrayList<Vertex<T>>();
+		Vertex<T> current = end;
+		while (current != init) {
+			result.add(0,current);
+			current = current.getPre();
+		}
+		result.add(0, init);
+		System.out.println(result);
 		
 		return result;
 	}
