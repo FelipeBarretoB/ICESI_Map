@@ -15,7 +15,7 @@ public class IcesiMap {
 		Vertex<Integer> v = new Vertex<>(1, "");
 		g.addVertex(v);
 		for(int c=2;c<137;c++) {
-			if(c==135) {
+			if(c==131) {
 				v= new Vertex<Integer>(c, "El Saman");
 			}else if(c==26) {
 				v= new Vertex<Integer>(c, "Auditorios");
@@ -69,7 +69,7 @@ public class IcesiMap {
 		g.addEdge(e);
 		e = new Edge<>(1, g.getNodes().get(1), g.getNodes().get(4));
 		g.addEdge(e);
-		e = new Edge<>(1, g.getNodes().get(4), g.getNodes().get(135));
+		e = new Edge<>(1, g.getNodes().get(4), g.getNodes().get(131));
 		g.addEdge(e);
 		e = new Edge<>(1, g.getNodes().get(131), g.getNodes().get(2));
 		g.addEdge(e);
@@ -412,7 +412,6 @@ public class IcesiMap {
 		e = new Edge<>(1, g.getNodes().get(134), g.getNodes().get(135));
 		g.addEdge(e);
 		g.getNodes().remove(0);
-		g.getNodes().remove(30);
 		g.getNodes().remove(44);
 	}
 
@@ -427,7 +426,7 @@ public class IcesiMap {
 		v = new Vertex<>(1, "");
 		w.addVertex(v);
 		for(int c=2;c<137;c++) {
-			if(c==135) {
+			if(c==131) {
 				v= new Vertex<Integer>(c, "El Saman");
 			}else if(c==26) {
 				v= new Vertex<Integer>(c, "Auditorios");
@@ -481,7 +480,7 @@ public class IcesiMap {
 		w.addEdge(e);
 		e = new Edge<>(9.64, w.getNodes().get(1), w.getNodes().get(4));
 		w.addEdge(e);
-		e = new Edge<>(12.98, w.getNodes().get(4), w.getNodes().get(135));
+		e = new Edge<>(12.98, w.getNodes().get(4), w.getNodes().get(131));
 		w.addEdge(e);
 		e = new Edge<>(12.32, w.getNodes().get(131), w.getNodes().get(2));
 		w.addEdge(e);
