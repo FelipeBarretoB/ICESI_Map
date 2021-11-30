@@ -45,7 +45,7 @@ public class IcesiMap {
 				v= new Vertex<Integer>(c, "Futbol 1");
 			}else if(c==123) {
 				v= new Vertex<Integer>(c, "N");
-			}else if(c==26) {
+			}else if(c==126) {
 				v= new Vertex<Integer>(c, "O");
 			}else if(c==98) {
 				v= new Vertex<Integer>(c, "C");
@@ -57,6 +57,10 @@ public class IcesiMap {
 				v= new Vertex<Integer>(c, "Biblioteca");
 			}else if(c==92) {
 				v= new Vertex<Integer>(c, "G");
+			}else if (c == 17) {
+				v = new Vertex<Integer>(c, "M");
+			}else if (c == 40) {
+				v = new Vertex<Integer>(c, "L");
 			}else {
 				v= new Vertex<Integer>(c, "");
 			}
@@ -424,7 +428,7 @@ public class IcesiMap {
 
 	public void createIcesiSimpleWeightedMap() {
 		w = new SimpleWeightedGraph<>();
-		Vertex<Integer> v = new Vertex<>(0, "null");
+		Vertex<Integer> v = new Vertex<>(0, "");
 		w.addVertex(v);
 		v = new Vertex<>(1, "");
 		w.addVertex(v);
@@ -457,7 +461,7 @@ public class IcesiMap {
 				v= new Vertex<Integer>(c, "Futbol 1");
 			}else if(c==123) {
 				v= new Vertex<Integer>(c, "N");
-			}else if(c==26) {
+			}else if(c==126) {
 				v= new Vertex<Integer>(c, "O");
 			}else if(c==98) {
 				v= new Vertex<Integer>(c, "C");
@@ -469,6 +473,10 @@ public class IcesiMap {
 				v= new Vertex<Integer>(c, "Biblioteca");
 			}else if(c==92) {
 				v= new Vertex<Integer>(c, "G");
+			}else if (c == 17) {
+				v = new Vertex<Integer>(c, "M");
+			}else if (c == 40) {
+				v = new Vertex<Integer>(c, "L");
 			}else {
 				v= new Vertex<Integer>(c, "");
 			}

@@ -15,10 +15,12 @@ public abstract class Graph<T> {
 	private ArrayList<Edge<T>> edges;
 	private double[][] distances;
 	private VertexComparator<T> vc;
+	private ArrayList<Vertex<T>> nodesWithProps;
 	
 	public Graph() {
 		nodes = new ArrayList<Vertex<T>>();
 		edges = new ArrayList<Edge<T>>();
+		nodesWithProps = new ArrayList<Vertex<T>>();
 	}
 	
 	public ArrayList<Vertex<T>> getNodes() {
@@ -241,7 +243,7 @@ public abstract class Graph<T> {
 	// TODO
 	// Es una  busqueda lineal, podríamos intentar busquedas más rápidas
 	// Si se hace sort, etc.
-	public int returnPos(Vertex<T> v) {
+	public int returnPos(Vertex<T> v, ArrayList<Vertex<T>> nodes) {
 		boolean found = false;
 		int index = 0;
 		for (int i = 0; i < nodes.size() && !found; i++) {
@@ -253,8 +255,21 @@ public abstract class Graph<T> {
 		return index;
 	}
 	
-	public double[][] floydWarshall() {
-		
+	public void createNodesWithProps() {
+		for (Vertex<T> v : nodes) {
+			if (!v.getProperties().equals("")) {
+				nodesWithProps.add(v);
+				System.out.println(v.getProperties());
+			}
+		}
+	}
+	
+	public ArrayList<Vertex<T>> getNodesWithProps() {
+		return nodesWithProps;
+	}
+	
+	public double[][] floydWarshall(ArrayList<Vertex<T>> nodes) {
+		double[][] distancesProps = new double[20][20];
 		distances = new double[nodes.size()][nodes.size()];
 		for (int i = 0; i < nodes.size(); i++) {
 			for (int j = 0; j < nodes.size(); j++) {
@@ -267,11 +282,13 @@ public abstract class Graph<T> {
 		}
 		
 		for (Edge<T> e : edges) {
-			int posOne = returnPos(e.getOrigin());
-			int posTwo = returnPos(e.getDestiny());
-			distances[posOne][posTwo] = e.getWeight();
-			distances[posTwo][posOne] = e.getWeight();
+			int posOne = returnPos(e.getOrigin(), nodes);
+			int posTwo = returnPos(e.getDestiny(), nodes);
 			/*System.out.println(e.getWeight() + " - [" + posOne + "][" + posTwo + "]" );*/
+			if (posOne != posTwo) {
+				distances[posOne][posTwo] = e.getWeight();
+				distances[posTwo][posOne] = e.getWeight();
+			}
 		}
 		
 		/*String print = "";
@@ -288,19 +305,20 @@ public abstract class Graph<T> {
 				for (int j = 0; j < nodes.size(); j++) {
 					if (distances[i][j] > distances[i][k] + distances[k][j]) {
 						distances[i][j] = distances[i][k] + distances[k][j];
+						distances[i][j] =  Math.floor(distances[i][j] * 100) / 100;
 					}
 				}
 			}
 		}
 		
-		String print = "";
+		/*String print = "";
 		for (int i = 0; i < distances.length; i++) {
 			for (int j = 0; j < distances[0].length; j++) {
 				print += distances[i][j] + " | ";
 			}
 			print += "\n";
 		}
-		System.out.println("\n" + print);
+		System.out.println("\n" + print);*/
 		
 		return distances;
 	}

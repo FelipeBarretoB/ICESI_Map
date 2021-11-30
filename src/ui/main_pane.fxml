@@ -6,9 +6,10 @@
 
 <BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <VBox prefHeight="560.0" prefWidth="140.0" BorderPane.alignment="CENTER" />
+      <VBox prefHeight="560.0" prefWidth="140.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#loadProcess" text="Dijkstra" />
+            <Button mnemonicParsing="false" onAction="#loadDistances" text="Floyd" />
+         </children></VBox>
    </left>
-   <top>
-      <Button mnemonicParsing="false" onAction="#loadProcess" text="Button" BorderPane.alignment="CENTER" />
-   </top>
 </BorderPane>
