@@ -75,6 +75,7 @@ public class IcesiMapGUI{
     	values.add("L");
     	values.add("M");
     	values.add("N");
+    	values.add("O");
     	values.add("Cancha de Futbol");
     	values.add("Tenis");
     	values.add("Auditorios");
