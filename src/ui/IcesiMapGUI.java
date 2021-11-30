@@ -148,7 +148,6 @@ public class IcesiMapGUI{
     		String destiny = cbDestiny.getSelectionModel().getSelectedItem();
     		
     		System.out.println(iMap.returnSimpleGraph().getNodes().size());
-    		System.out.println(iMap.returnSimpleGraph().searchByProp(origin));
     		ArrayList<Vertex<Integer>> solution = iMap.returnSimpleGraph().dijkstra(iMap.returnSimpleGraph().searchByProp(origin), iMap.returnSimpleGraph().searchByProp(destiny));
     		solution = iMap.returnSimpleWeightedGraph().dijkstra(iMap.returnSimpleWeightedGraph().searchByProp(origin), iMap.returnSimpleWeightedGraph().searchByProp(destiny));
     		double total = solution.get(solution.size() - 1).getDist();
