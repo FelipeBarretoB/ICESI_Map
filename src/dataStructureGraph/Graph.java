@@ -153,8 +153,8 @@ public abstract class Graph<T> {
 		//PriorityQueue<Vertex<T>> queueTwo = new PriorityQueue<>();
 		ArrayList<Vertex<T>> queueTwo = new ArrayList<>();
 		ArrayList<Vertex<T>> result = new ArrayList<>();
-		double[] distances = new double[nodes.size() + 3];
-		Object[] prevs = new Object[nodes.size() + 3];
+		double[] distances = new double[nodes.size()];
+		Object[] prevs = new Object[nodes.size()];
 		queueTwo.add(init);
 		for (Vertex<T> v : nodes) {
 			if (v != init) {
@@ -172,6 +172,7 @@ public abstract class Graph<T> {
 		}
 		
 		boolean found = false;
+		System.out.println(init.getAdjacents() + " Adyacentes");
 		while (!queueTwo.isEmpty()) {
 			Vertex<T> u = queueTwo.remove(0);
 			boolean change = false;
@@ -194,7 +195,7 @@ public abstract class Graph<T> {
 					// TODO Q.decrease_priority(v, alt)
 				}
 			}
-			System.out.println(queueTwo);
+			//System.out.println(queueTwo);
 			/*vc = new VertexComparator<>();
 			//queueTwo.remove(0);
 			if (change) {				
