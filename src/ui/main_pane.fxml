@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -10,6 +11,7 @@
          <children>
             <Button mnemonicParsing="false" onAction="#loadProcess" text="Dijkstra" />
             <Button mnemonicParsing="false" onAction="#loadDistances" text="Floyd" />
+            <ChoiceBox fx:id="choiceGraph" prefWidth="150.0" />
          </children></VBox>
    </left>
 </BorderPane>

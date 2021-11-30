@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -26,8 +27,13 @@ public class IcesiMapGUI{
 	private IcesiMap iMap;
 	
 	@FXML
+	private ChoiceBox<String> choiceGraph;
+	
+	private String graph;
+	
+	@FXML
     private ComboBox<String> cbOrigin;
-
+	
     @FXML
     private ComboBox<String> cbDestiny;
     
@@ -53,19 +59,37 @@ public class IcesiMapGUI{
 		}*/
     }
     
+    public void prepareChoiceBox() {
+    	ObservableList<String> ol;
+    	ArrayList<String> values = new ArrayList<>();
+    	values.add("Simple Graph");
+    	values.add("Simple Weighted Graph");
+    	ol = FXCollections.observableArrayList(values);
+    	choiceGraph.setItems(ol);
+    }
+    
     @FXML
     public void loadDistances(ActionEvent event) {
-    	try {
-			loadPage("distances.fxml");
-			chargeFloyd();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+    	if (!choiceGraph.getSelectionModel().getSelectedItem().equals("")) {
+    		graph = choiceGraph.getSelectionModel().getSelectedItem();
+    		try {
+    			loadPage("distances.fxml");
+    			chargeFloyd();
+    		} catch (IOException e) {
+    			e.printStackTrace();
+    		}
+    	}
     }
     
     public void chargeFloyd() {
-    	iMap.returnSimpleWeightedGraph().createNodesWithProps();
-    	double[][] result = iMap.returnSimpleWeightedGraph().floydWarshall(iMap.returnSimpleWeightedGraph().getNodesWithProps());
+    	double[][] result;
+    	if (choiceGraph.getSelectionModel().getSelectedItem().equals("Simple Graph")) {
+    		iMap.returnSimpleGraph().createNodesWithProps();
+    		result = iMap.returnSimpleGraph().floydWarshall(iMap.returnSimpleGraph().getNodesWithProps());
+    	} else {    		
+    		iMap.returnSimpleWeightedGraph().createNodesWithProps();
+    		result = iMap.returnSimpleWeightedGraph().floydWarshall(iMap.returnSimpleWeightedGraph().getNodesWithProps());
+    	}
 		String print = "";
 		print += "\t|   BI    |    B    |    A    |    M    |    AD   |    CP   |    L    |    K    |    H    |    I    |    J    |    Ex   |    G    |    F    |    C    |    D    |    F1   |    F2   |    E    |    N    |    O    |    SA   |  \n";
 		String [] names = {"BI", "B", "A", "M", "AD", "CP", "L", "K", "H", "I", "J", "Ex", "G", "F", "C", "D", "F1", "F2", "E", "N", "O", "SA"};
@@ -99,12 +123,15 @@ public class IcesiMapGUI{
 	}
     @FXML
     public void loadProcess(ActionEvent event) {
-    	try {
-			loadPage("case_pane.fxml");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-    	loadComboBox();
+	    if (!choiceGraph.getSelectionModel().getSelectedItem().equals("")) {
+	    	graph = choiceGraph.getSelectionModel().getSelectedItem();
+	    	try {
+	    		loadPage("case_pane.fxml");
+	    	} catch (IOException e) {
+	    		e.printStackTrace();
+	    	}
+	    	loadComboBox();
+	    }
     }
 
     
@@ -146,17 +173,20 @@ public class IcesiMapGUI{
     	if (cbOrigin.getSelectionModel().getSelectedItem() != null && cbDestiny.getSelectionModel().getSelectedItem() != null) {
     		String origin = cbOrigin.getSelectionModel().getSelectedItem();
     		String destiny = cbDestiny.getSelectionModel().getSelectedItem();
-    		
-    		System.out.println(iMap.returnSimpleGraph().getNodes().size());
-    		ArrayList<Vertex<Integer>> solution = iMap.returnSimpleGraph().dijkstra(iMap.returnSimpleGraph().searchByProp(origin), iMap.returnSimpleGraph().searchByProp(destiny));
-    		solution = iMap.returnSimpleWeightedGraph().dijkstra(iMap.returnSimpleWeightedGraph().searchByProp(origin), iMap.returnSimpleWeightedGraph().searchByProp(destiny));
+    		ArrayList<Vertex<Integer>> solution;
+    		if (choiceGraph.getSelectionModel().getSelectedItem().equals("Simple Graph")) {
+    			solution = iMap.returnSimpleGraph().dijkstra(iMap.returnSimpleGraph().searchByProp(origin), iMap.returnSimpleGraph().searchByProp(destiny));		
+        	} else {
+        		solution = iMap.returnSimpleWeightedGraph().dijkstra(iMap.returnSimpleWeightedGraph().searchByProp(origin), iMap.returnSimpleWeightedGraph().searchByProp(destiny));
+        	}
+    		//System.out.println(iMap.returnSimpleGraph().getNodes().size());
     		double total = solution.get(solution.size() - 1).getDist();
     		path.setText(solution + "");
-    		distance.setText("Distance: " + (Math.floor(total * 100) / 100) + " m");
-    		//iMap.returnSimpleWeightedGraph().floydWarshall();
-    	//	System.out.println(solution);
-    		//System.out.println(solution.size());
-    		//iMap.returnSimpleGraph().floydWarshall();
+    		if (choiceGraph.getSelectionModel().getSelectedItem().equals("Simple Graph")) {
+    			distance.setText("Traveled Edges: " + (int) total);
+    		} else {    			
+    			distance.setText("Distance: " + (Math.floor(total * 100) / 100) + " m");
+    		}
     	}
     }
 }

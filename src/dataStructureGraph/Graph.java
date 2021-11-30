@@ -256,6 +256,7 @@ public abstract class Graph<T> {
 	}
 	
 	public void createNodesWithProps() {
+		nodesWithProps = new ArrayList<Vertex<T>>();
 		for (Vertex<T> v : nodes) {
 			if (!v.getProperties().equals("")) {
 				nodesWithProps.add(v);
@@ -269,7 +270,6 @@ public abstract class Graph<T> {
 	}
 	
 	public double[][] floydWarshall(ArrayList<Vertex<T>> nodes) {
-		double[][] distancesProps = new double[20][20];
 		distances = new double[nodes.size()][nodes.size()];
 		for (int i = 0; i < nodes.size(); i++) {
 			for (int j = 0; j < nodes.size(); j++) {
@@ -280,6 +280,8 @@ public abstract class Graph<T> {
 				}
 			}
 		}
+		
+		System.out.println(nodes);
 		
 		for (Edge<T> e : edges) {
 			int posOne = returnPos(e.getOrigin(), nodes);
