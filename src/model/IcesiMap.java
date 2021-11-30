@@ -50,7 +50,7 @@ public class IcesiMap {
 			}else if(c==13) {
 				v= new Vertex<Integer>(c, "B");
 			}else if(c==14) {
-				v= new Vertex<Integer>(c, "O");
+				v= new Vertex<Integer>(c, "A");
 			}else if(c==12) {
 				v= new Vertex<Integer>(c, "Biblioteca");
 			}else if(c==92) {
@@ -462,7 +462,7 @@ public class IcesiMap {
 			}else if(c==13) {
 				v= new Vertex<Integer>(c, "B");
 			}else if(c==14) {
-				v= new Vertex<Integer>(c, "O");
+				v= new Vertex<Integer>(c, "A");
 			}else if(c==12) {
 				v= new Vertex<Integer>(c, "Biblioteca");
 			}else if(c==92) {

@@ -96,9 +96,10 @@ public class IcesiMapGUI{
     		String destiny = cbDestiny.getSelectionModel().getSelectedItem();
     		
     		System.out.println(iMap.returnSimpleGraph().getNodes().size());
+    		System.out.println(iMap.returnSimpleGraph().searchByProp(origin));
     		ArrayList<Vertex<Integer>> solution = iMap.returnSimpleGraph().dijkstra(iMap.returnSimpleGraph().searchByProp(origin), iMap.returnSimpleGraph().searchByProp(destiny));
-    		System.out.println(solution);
-    		System.out.println(solution.size());
+    	//	System.out.println(solution);
+    		//System.out.println(solution.size());
     		//iMap.returnSimpleGraph().floydWarshall();
     	}
     }
