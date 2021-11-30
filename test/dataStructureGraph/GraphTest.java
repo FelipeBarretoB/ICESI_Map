@@ -198,7 +198,7 @@ class GraphTest {
 		}
 		
 		assertTrue(test);*/
-		double[][] path = graph.floydWarshall(graph.getNodes());
+		double[][] path = graph.floydWarshall(/*graph.getNodes()*/);
 		boolean error = false;
 		for (int i = 0; i < path.length && !error; i++) {
 			for (int j = 0; j < path[0].length && !error; j++) {

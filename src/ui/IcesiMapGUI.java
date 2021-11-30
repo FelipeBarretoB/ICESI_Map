@@ -81,16 +81,119 @@ public class IcesiMapGUI{
     	}
     }
     
+    public int switchPos(int index) {
+    	int toReturn = -1;
+    	switch (index) {
+    		case 12:
+    			toReturn = 0;
+    			break;
+    		case 13:
+    			toReturn = 1;
+    			break;
+    		case 14:
+    			toReturn = 2;
+    			break;
+    		case 17:
+    			toReturn = 3;
+    			break;
+    		case 26:
+    			toReturn = 4;
+    			break;
+    		case 31:
+    			toReturn = 5;
+    			break;
+    		case 40:
+    			toReturn = 6;
+    			break;
+    		case 48:
+    			toReturn = 7;
+    			break;
+    		case 55:
+    			toReturn = 8;
+    			break;
+    		case 57:
+    			toReturn = 9;
+    			break;
+    		case 61:
+    			toReturn = 10;
+    			break;
+    		case 69:
+    			toReturn = 11;
+    			break;
+    		case 92:
+    			toReturn = 12;
+    			break;
+    		case 96:
+    			toReturn = 13;
+    			break;
+    		case 98:
+    			toReturn = 14;
+    			break;
+    		case 100:
+    			toReturn = 15;
+    			break;
+    		case 109:
+    			toReturn = 16;
+    			break;
+    		case 112:
+    			toReturn = 17;
+    			break;
+    		case 114:
+    			toReturn = 18;
+    			break;
+    		case 123:
+    			toReturn = 19;
+    			break;
+    		case 126:
+    			toReturn = 20;
+    			break;
+    		case 131:
+    			toReturn = 21;
+    			break;
+    	}
+    	return toReturn;
+    }
+    
     public void chargeFloyd() {
     	double[][] result;
     	if (choiceGraph.getSelectionModel().getSelectedItem().equals("Simple Graph")) {
     		iMap.returnSimpleGraph().createNodesWithProps();
-    		result = iMap.returnSimpleGraph().floydWarshall(iMap.returnSimpleGraph().getNodesWithProps());
+    		result = iMap.returnSimpleGraph().floydWarshall(/*iMap.returnSimpleGraph().getNodesWithProps()*/);
     	} else {    		
     		iMap.returnSimpleWeightedGraph().createNodesWithProps();
-    		result = iMap.returnSimpleWeightedGraph().floydWarshall(iMap.returnSimpleWeightedGraph().getNodesWithProps());
+    		result = iMap.returnSimpleWeightedGraph().floydWarshall(/*iMap.returnSimpleWeightedGraph().getNodesWithProps()*/);
     	}
-		String print = "";
+    	ArrayList<ArrayList<Double>> resultTwo = new ArrayList<>(); 
+    	for (int i = 0; i < result.length; i++) {
+    		if (switchPos(i) != -1) {
+    			resultTwo.add(switchPos(i), new ArrayList<Double>());
+    			for (int j = 0; j < result.length; j++) {
+    				if (switchPos(j) != -1) {
+    					resultTwo.get(switchPos(i)).add(switchPos(j), result[i][j]);
+    				}
+    			}
+    		}
+    	}
+    	String print = "";
+    	print += "\t|   BI    |    B    |    A    |    M    |    AD   |    CP   |    L    |    K    |    H    |    I    |    J    |    Ex   |    G    |    F    |    C    |    D    |    F1   |    F2   |    E    |    N    |    O    |    SA   |  \n";
+		String [] names = {"BI", "B", "A", "M", "AD", "CP", "L", "K", "H", "I", "J", "Ex", "G", "F", "C", "D", "F1", "F2", "E", "N", "O", "SA"};
+    	for(int i = 0; i < resultTwo.size(); i++) {
+    		print += names[i] + "\t|  ";
+    		for (int j = 0; j < resultTwo.get(0).size(); j++) {
+    			if ((resultTwo.get(i).get(j) + "").length() == 4) {
+					print += "0" + resultTwo.get(i).get(j) + "  |  ";
+				} else if ((result[i][j] + "").length() == 3) {
+					print += "00" + resultTwo.get(i).get(j) + "  |  ";
+				} else {					
+					print += resultTwo.get(i).get(j) + "  |  ";	
+				}
+    		}
+    		print += "\n";
+    	}
+    	
+    	
+    	
+		/*String print = "";
 		print += "\t|   BI    |    B    |    A    |    M    |    AD   |    CP   |    L    |    K    |    H    |    I    |    J    |    Ex   |    G    |    F    |    C    |    D    |    F1   |    F2   |    E    |    N    |    O    |    SA   |  \n";
 		String [] names = {"BI", "B", "A", "M", "AD", "CP", "L", "K", "H", "I", "J", "Ex", "G", "F", "C", "D", "F1", "F2", "E", "N", "O", "SA"};
 		System.out.println(names.length + " - " + result.length);
@@ -106,7 +209,7 @@ public class IcesiMapGUI{
 				}
 			}
 			print += "\n";
-		}
+		}*/
 		System.out.println("\n" + print);
 		
 		resultFloyd.setText(print);

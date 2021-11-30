@@ -243,7 +243,7 @@ public abstract class Graph<T> {
 	// TODO
 	// Es una  busqueda lineal, podríamos intentar busquedas más rápidas
 	// Si se hace sort, etc.
-	public int returnPos(Vertex<T> v, ArrayList<Vertex<T>> nodes) {
+	public int returnPos(Vertex<T> v/*, ArrayList<Vertex<T>> nodes*/) {
 		boolean found = false;
 		int index = 0;
 		for (int i = 0; i < nodes.size() && !found; i++) {
@@ -269,7 +269,7 @@ public abstract class Graph<T> {
 		return nodesWithProps;
 	}
 	
-	public double[][] floydWarshall(ArrayList<Vertex<T>> nodes) {
+	public double[][] floydWarshall(/*ArrayList<Vertex<T>> nodes*/) {
 		distances = new double[nodes.size()][nodes.size()];
 		for (int i = 0; i < nodes.size(); i++) {
 			for (int j = 0; j < nodes.size(); j++) {
@@ -284,8 +284,8 @@ public abstract class Graph<T> {
 		System.out.println(nodes);
 		
 		for (Edge<T> e : edges) {
-			int posOne = returnPos(e.getOrigin(), nodes);
-			int posTwo = returnPos(e.getDestiny(), nodes);
+			int posOne = returnPos(e.getOrigin()/*, nodes*/);
+			int posTwo = returnPos(e.getDestiny()/*, nodes*/);
 			/*System.out.println(e.getWeight() + " - [" + posOne + "][" + posTwo + "]" );*/
 			if (posOne != posTwo) {
 				distances[posOne][posTwo] = e.getWeight();
