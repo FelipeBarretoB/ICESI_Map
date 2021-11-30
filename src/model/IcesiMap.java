@@ -67,7 +67,6 @@ public class IcesiMap {
 			g.addVertex(v);
 			//12 13 14 17 26 31 40 48 55 57 61 69 92 96 98 100 109 112 114 123 126 131
 		}
-		g.addVertex(v);
 		Edge<Integer> e = new Edge<>(9.62, g.getNodes().get(1), g.getNodes().get(2));
 		g.addEdge(e);
 		e = new Edge<>(1, g.getNodes().get(2), g.getNodes().get(3));
@@ -833,13 +832,11 @@ public class IcesiMap {
 		w.addEdge(e);
 		e = new Edge<>(14.76, w.getNodes().get(134), w.getNodes().get(135));
 		w.addEdge(e);
-		/*w.getNodes().remove(0);
-		w.getNodes().remove(30);
-		w.getNodes().remove(44);*/
+
 	}
 
 
-public SimpleWeightedGraph<Integer> returnSimpleWeightedGraph() {
-	return w;
-}
+	public SimpleWeightedGraph<Integer> returnSimpleWeightedGraph() {
+		return w;
+	}
 }

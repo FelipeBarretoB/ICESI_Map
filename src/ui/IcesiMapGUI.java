@@ -17,6 +17,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
 import model.IcesiMap;
 
 public class IcesiMapGUI{
@@ -46,11 +49,18 @@ public class IcesiMapGUI{
     @FXML
     private TextArea resultFloyd;
     
+    
+    @FXML
+    private ArrayList<Circle> nodes;
+    
+    @FXML
+    private ArrayList<Line> edges;
+    
     public IcesiMapGUI(IcesiMap map) {
     	iMap = map;
     	iMap.createIcesiSimpleMap();
     	iMap.createIcesiSimpleWeightedMap();
-    	//TODO iMap.createIcesiSimpleWeightedMap();
+    	fillNodesAndEdges();
     	/*try {
 			loadPage("case_pane.fxml");
 			loadComboBox();
@@ -283,23 +293,65 @@ public class IcesiMapGUI{
     @FXML
     public void searchPath(ActionEvent event) {
     	if (cbOrigin.getSelectionModel().getSelectedItem() != null && cbDestiny.getSelectionModel().getSelectedItem() != null) {
+    		resetColorMap();
     		String origin = cbOrigin.getSelectionModel().getSelectedItem();
     		String destiny = cbDestiny.getSelectionModel().getSelectedItem();
     		ArrayList<Vertex<Integer>> solution;
+    		double total;
     		if (choiceGraph.getSelectionModel().getSelectedItem().equals("Simple Graph")) {
-    			solution = iMap.returnSimpleGraph().dijkstra(iMap.returnSimpleGraph().searchByProp(origin), iMap.returnSimpleGraph().searchByProp(destiny));		
-        	} else {
-        		System.out.println(iMap.returnSimpleWeightedGraph().searchByProp(destiny).getProperties());
-        		solution = iMap.returnSimpleWeightedGraph().dijkstra(iMap.returnSimpleWeightedGraph().searchByProp(origin), iMap.returnSimpleWeightedGraph().searchByProp(destiny));
-        	}
-    		//System.out.println(iMap.returnSimpleGraph().getNodes().size());
-    		double total = solution.get(solution.size() - 1).getDist();
-    		path.setText(solution + "");
-    		if (choiceGraph.getSelectionModel().getSelectedItem().equals("Simple Graph")) {
+    			solution = iMap.returnSimpleGraph().dijkstra(iMap.returnSimpleGraph().searchByProp(origin), iMap.returnSimpleGraph().searchByProp(destiny));	
+    			total = solution.get(solution.size() - 1).getDist();
     			distance.setText("Traveled Edges: " + (int) total);
-    		} else {    			
-    			distance.setText("Distance: " + (Math.floor(total * 100) / 100) + " m");
-    		}
+        	} else {
+        		solution = iMap.returnSimpleWeightedGraph().dijkstra(iMap.returnSimpleWeightedGraph().searchByProp(origin), iMap.returnSimpleWeightedGraph().searchByProp(destiny));
+        		total = solution.get(solution.size() - 1).getDist();
+        		distance.setText("Distance: " + (Math.floor(total * 100) / 100) + " m");
+        	}
+    		path.setText(solution + "");
+    		colorMap(solution);
     	}
     }
+    
+    public void fillNodesAndEdges() {
+    	nodes= new ArrayList<>();
+    	edges = new ArrayList<>();
+    	System.out.println("paso");
+    }
+    
+    public void colorMap(ArrayList<Vertex<Integer>> solution) {
+    	for(int c=0;c <solution.size();c++) {
+    		nodes.get(solution.get(c).getValue()).setFill(Color.GREEN);
+    		System.out.println("verde");
+    	}
+    	for(int i=0; i<solution.size()-1;i++) {
+    		if (choiceGraph.getSelectionModel().getSelectedItem().equals("Simple Graph")) {
+    			for(int c=0;c<iMap.returnSimpleGraph().getEdges().size();c++) {
+    	    		if((solution.get(i) == iMap.returnSimpleGraph().getEdges().get(c).getOrigin() && solution.get(i+1) == iMap.returnSimpleGraph().getEdges().get(c).getDestiny()) || (solution.get(i+1) == iMap.returnSimpleGraph().getEdges().get(c).getOrigin() && solution.get(i) == iMap.returnSimpleGraph().getEdges().get(c).getDestiny()) ) {
+    	    			edges.get(c).setFill(Color.GREEN);
+    	    			System.out.println("pog?");
+    	    		}
+    	    	}
+        	} else {
+        		for(int c=0;c<iMap.returnSimpleGraph().getEdges().size();c++) {
+            		if((solution.get(i) == iMap.returnSimpleWeightedGraph().getEdges().get(c).getOrigin() && solution.get(i+1) == iMap.returnSimpleWeightedGraph().getEdges().get(c).getDestiny()) || (solution.get(i+1) == iMap.returnSimpleWeightedGraph().getEdges().get(c).getOrigin() && solution.get(i) == iMap.returnSimpleWeightedGraph().getEdges().get(c).getDestiny()) ) {
+            			edges.get(c).setFill(Color.GREEN);
+            			System.out.println("pog?");
+            		}
+            	}
+        	}
+    	}
+    	
+    }
+    
+    
+    
+    public void resetColorMap() {
+    	for(int c=0; c < nodes.size();c++) {
+    		nodes.get(c).setFill(Color.CORNFLOWERBLUE);
+    	}
+    	for(int c=0; c< edges.size();c++) {
+    		edges.get(c).setFill(Color.CORNFLOWERBLUE);
+    	}
+    }
+    
 }
