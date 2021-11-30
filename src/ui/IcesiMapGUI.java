@@ -81,6 +81,15 @@ public class IcesiMapGUI{
     	}
     }
     
+    @FXML
+    public void loadMap(ActionEvent event) {
+    	try {
+			loadPage("map_page.fxml");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    
     public int switchPos(int index) {
     	int toReturn = -1;
     	switch (index) {
