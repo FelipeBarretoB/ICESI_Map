@@ -412,6 +412,7 @@ public class IcesiMap {
 		e = new Edge<>(1, g.getNodes().get(134), g.getNodes().get(135));
 		g.addEdge(e);
 		g.getNodes().remove(0);
+		g.getNodes().remove(30);
 		g.getNodes().remove(44);
 	}
 
