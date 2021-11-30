@@ -216,6 +216,7 @@ public abstract class Graph<T> {
 			current = current.getPre();
 		}
 		result.add(0, init);
+		//System.out.println(end.getPre());
 		System.out.println(result);
 		
 		return result;
