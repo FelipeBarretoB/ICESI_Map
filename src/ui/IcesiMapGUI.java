@@ -31,6 +31,7 @@ public class IcesiMapGUI{
     public IcesiMapGUI(IcesiMap map) {
     	iMap = map;
     	iMap.createIcesiSimpleMap();
+    	iMap.createIcesiSimpleWeightedMap();
     	//TODO iMap.createIcesiSimpleWeightedMap();
     	/*try {
 			loadPage("case_pane.fxml");
@@ -99,6 +100,7 @@ public class IcesiMapGUI{
     		System.out.println(iMap.returnSimpleGraph().getNodes().size());
     		System.out.println(iMap.returnSimpleGraph().searchByProp(origin));
     		ArrayList<Vertex<Integer>> solution = iMap.returnSimpleGraph().dijkstra(iMap.returnSimpleGraph().searchByProp(origin), iMap.returnSimpleGraph().searchByProp(destiny));
+    		solution = iMap.returnSimpleWeightedGraph().dijkstra(iMap.returnSimpleWeightedGraph().searchByProp(origin), iMap.returnSimpleWeightedGraph().searchByProp(destiny));
     	//	System.out.println(solution);
     		//System.out.println(solution.size());
     		//iMap.returnSimpleGraph().floydWarshall();

@@ -12,9 +12,11 @@ public class IcesiMap {
 
 	public void createIcesiSimpleMap() {
 		g = new SimpleGraph<>();
-		Vertex<Integer> v = new Vertex<>(1, "");
+		Vertex<Integer> v = new Vertex<>(0, "");
 		g.addVertex(v);
-		for(int c=2;c<137;c++) {
+		v = new Vertex<>(1, "");
+		g.addVertex(v);
+		for(int c=2;c<136;c++) {
 			if(c==131) {
 				v= new Vertex<Integer>(c, "El Saman");
 			}else if(c==26) {
@@ -411,9 +413,9 @@ public class IcesiMap {
 		g.addEdge(e);
 		e = new Edge<>(1, g.getNodes().get(134), g.getNodes().get(135));
 		g.addEdge(e);
-		g.getNodes().remove(0);
+		/*g.getNodes().remove(0);
 		g.getNodes().remove(30);
-		g.getNodes().remove(44);
+		g.getNodes().remove(44);*/
 	}
 
 	public SimpleGraph<Integer> returnSimpleGraph() {
@@ -470,9 +472,8 @@ public class IcesiMap {
 			}else {
 				v= new Vertex<Integer>(c, "");
 			}
-			g.addVertex(v);
+			w.addVertex(v);
 		}
-		w.addVertex(v);
 		Edge<Integer> e = new Edge<>(9.62, w.getNodes().get(1), w.getNodes().get(2));
 		w.addEdge(e);
 		e = new Edge<>(9.65, w.getNodes().get(2), w.getNodes().get(3));
@@ -823,9 +824,9 @@ public class IcesiMap {
 		w.addEdge(e);
 		e = new Edge<>(14.76, w.getNodes().get(134), w.getNodes().get(135));
 		w.addEdge(e);
-		w.getNodes().remove(0);
+		/*w.getNodes().remove(0);
 		w.getNodes().remove(30);
-		w.getNodes().remove(44);
+		w.getNodes().remove(44);*/
 	}
 
 
