@@ -289,6 +289,7 @@ public class IcesiMapGUI{
     		if (choiceGraph.getSelectionModel().getSelectedItem().equals("Simple Graph")) {
     			solution = iMap.returnSimpleGraph().dijkstra(iMap.returnSimpleGraph().searchByProp(origin), iMap.returnSimpleGraph().searchByProp(destiny));		
         	} else {
+        		System.out.println(iMap.returnSimpleWeightedGraph().searchByProp(destiny).getProperties());
         		solution = iMap.returnSimpleWeightedGraph().dijkstra(iMap.returnSimpleWeightedGraph().searchByProp(origin), iMap.returnSimpleWeightedGraph().searchByProp(destiny));
         	}
     		//System.out.println(iMap.returnSimpleGraph().getNodes().size());

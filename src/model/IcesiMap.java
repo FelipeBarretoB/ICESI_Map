@@ -22,7 +22,7 @@ public class IcesiMap {
 			}else if(c==26) {
 				v= new Vertex<Integer>(c, "Auditorios");
 			}else if(c==31) {
-				v= new Vertex<Integer>(c, "Cafeteria principal");
+				v= new Vertex<Integer>(c, "Cafeteria Principal");
 			}else if(c==48) {
 				v= new Vertex<Integer>(c, "K");
 			}else if(c==69) {
@@ -65,6 +65,7 @@ public class IcesiMap {
 				v= new Vertex<Integer>(c, "");
 			}
 			g.addVertex(v);
+			//12 13 14 17 26 31 40 48 55 57 61 69 92 96 98 100 109 112 114 123 126 131
 		}
 		g.addVertex(v);
 		Edge<Integer> e = new Edge<>(9.62, g.getNodes().get(1), g.getNodes().get(2));
@@ -151,13 +152,13 @@ public class IcesiMap {
 		g.addEdge(e);
 		e = new Edge<>(1, g.getNodes().get(26), g.getNodes().get(27));
 		g.addEdge(e);
-		e = new Edge<>(1, g.getNodes().get(16), g.getNodes().get(19));
+		e = new Edge<>(1, g.getNodes().get(16), g.getNodes().get(30));
 		g.addEdge(e);
 		e = new Edge<>(1, g.getNodes().get(16), g.getNodes().get(38));
 		g.addEdge(e);
-		e = new Edge<>(1, g.getNodes().get(19), g.getNodes().get(12));
+		e = new Edge<>(1, g.getNodes().get(30), g.getNodes().get(12));
 		g.addEdge(e);
-		e = new Edge<>(1, g.getNodes().get(19), g.getNodes().get(28));
+		e = new Edge<>(1, g.getNodes().get(30), g.getNodes().get(28));
 		g.addEdge(e);
 		e = new Edge<>(1, g.getNodes().get(28), g.getNodes().get(29));
 		g.addEdge(e);
@@ -438,7 +439,7 @@ public class IcesiMap {
 			}else if(c==26) {
 				v= new Vertex<Integer>(c, "Auditorios");
 			}else if(c==31) {
-				v= new Vertex<Integer>(c, "Cafeteria principal");
+				v= new Vertex<Integer>(c, "Cafeteria Principal");
 			}else if(c==48) {
 				v= new Vertex<Integer>(c, "K");
 			}else if(c==69) {
@@ -566,13 +567,13 @@ public class IcesiMap {
 		w.addEdge(e);
 		e = new Edge<>(28.77, w.getNodes().get(26), w.getNodes().get(27));
 		w.addEdge(e);
-		e = new Edge<>(12.1, w.getNodes().get(16), w.getNodes().get(19));
+		e = new Edge<>(12.1, w.getNodes().get(16), w.getNodes().get(30));
 		w.addEdge(e);
 		e = new Edge<>(40.17, w.getNodes().get(16), w.getNodes().get(38));
 		w.addEdge(e);
-		e = new Edge<>(37.74, w.getNodes().get(19), w.getNodes().get(12));
+		e = new Edge<>(37.74, w.getNodes().get(30), w.getNodes().get(12));
 		w.addEdge(e);
-		e = new Edge<>(14.93, w.getNodes().get(19), w.getNodes().get(28));
+		e = new Edge<>(14.93, w.getNodes().get(30), w.getNodes().get(28));
 		w.addEdge(e);
 		e = new Edge<>(13.79, w.getNodes().get(28), w.getNodes().get(29));
 		w.addEdge(e);
