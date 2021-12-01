@@ -56,6 +56,547 @@ public class IcesiMapGUI{
     @FXML
     private ArrayList<Line> edges;
     
+    
+    @FXML
+    private Circle cirNode112;
+
+    @FXML
+    private Circle cirNode109;
+
+    @FXML
+    private Circle cirNode114;
+
+    @FXML
+    private Circle cirNode100;
+
+    @FXML
+    private Circle cirNode57;
+
+    @FXML
+    private Circle cirNode40;
+
+    @FXML
+    private Circle cirNode55;
+
+    @FXML
+    private Circle cirNode61;
+
+    @FXML
+    private Circle cirNode131;
+
+    @FXML
+    private Circle cirNode14;
+
+    @FXML
+    private Circle cirNode13;
+
+    @FXML
+    private Circle cirNode17;
+
+    @FXML
+    private Circle cirNode26;
+
+    @FXML
+    private Circle cirNode31;
+
+    @FXML
+    private Circle cirNode48;
+
+    @FXML
+    private Circle cirNode64;
+
+    @FXML
+    private Circle cirNode92;
+
+    @FXML
+    private Circle cirNode123;
+
+    @FXML
+    private Circle cirNode126;
+
+    @FXML
+    private Circle cirNode110;
+
+    @FXML
+    private Circle cirNode108;
+
+    @FXML
+    private Circle cirNode107;
+
+    @FXML
+    private Circle cirNode111;
+
+    @FXML
+    private Circle cirNode106;
+
+    @FXML
+    private Circle cirNode105;
+
+    @FXML
+    private Circle cirNode104;
+
+    @FXML
+    private Circle cirNode115;
+
+    @FXML
+    private Circle cirNode116;
+
+    @FXML
+    private Circle cirNode59;
+
+    @FXML
+    private Circle cirNode60;
+
+    @FXML
+    private Circle cirNode62;
+
+    @FXML
+    private Circle cirNode120;
+
+    @FXML
+    private Circle cirNode122;
+
+    @FXML
+    private Circle cirNode124;
+
+    @FXML
+    private Circle cirNode119;
+
+    @FXML
+    private Circle cirNode121;
+
+    @FXML
+    private Circle cirNode129;
+
+    @FXML
+    private Circle cirNode125;
+
+    @FXML
+    private Circle cirNode128;
+
+    @FXML
+    private Circle cirNode134;
+
+    @FXML
+    private Circle cirNode135;
+
+    @FXML
+    private Circle cirNode127;
+
+    @FXML
+    private Circle cirNode130;
+
+    @FXML
+    private Circle cirNode133;
+
+    @FXML
+    private Circle cirNode132;
+
+    @FXML
+    private Circle cirNode65;
+
+    @FXML
+    private Circle cirNode63;
+
+    @FXML
+    private Circle cirNode51;
+
+    @FXML
+    private Circle cirNode47;
+
+    @FXML
+    private Circle cirNode45;
+
+    @FXML
+    private Circle cirNode46;
+
+    @FXML
+    private Circle cirNode34;
+
+    @FXML
+    private Circle cirNode32;
+
+    @FXML
+    private Circle cirNode50;
+
+    @FXML
+    private Circle cirNode49;
+
+    @FXML
+    private Circle cirNode39;
+
+    @FXML
+    private Circle cirNode42;
+
+    @FXML
+    private Circle cirNode41;
+
+    @FXML
+    private Circle cirNode52;
+
+    @FXML
+    private Circle cirNode53;
+
+    @FXML
+    private Circle cirNode118;
+
+    @FXML
+    private Circle cirNode102;
+
+    @FXML
+    private Circle cirNode101;
+
+    @FXML
+    private Circle cirNode58;
+
+    @FXML
+    private Circle cirNode54;
+
+    @FXML
+    private Circle cirNode56;
+
+    @FXML
+    private Circle cirNode99;
+
+    @FXML
+    private Circle cirNode98;
+
+    @FXML
+    private Circle cirNode43;
+
+    @FXML
+    private Circle cirNode33;
+
+    @FXML
+    private Circle cirNode24;
+
+    @FXML
+    private Circle cirNode28;
+
+    @FXML
+    private Circle cirNode29;
+
+    @FXML
+    private Circle cirNode30;
+
+    @FXML
+    private Circle cirNode16;
+
+    @FXML
+    private Circle cirNode38;
+
+    @FXML
+    private Circle cirNode36;
+
+    @FXML
+    private Circle cirNode37;
+
+    @FXML
+    private Circle cirNode35;
+
+    @FXML
+    private Circle cirNode10;
+
+    @FXML
+    private Circle cirNode6;
+
+    @FXML
+    private Circle cirNode12;
+
+    @FXML
+    private Circle cirNode4;
+
+    @FXML
+    private Circle cirNode1;
+
+    @FXML
+    private Circle cirNode2;
+
+    @FXML
+    private Circle cirNode3;
+
+    @FXML
+    private Circle cirNode7;
+
+    @FXML
+    private Circle cirNode8;
+
+    @FXML
+    private Circle cirNode5;
+
+    @FXML
+    private Circle cirNode9;
+
+    @FXML
+    private Circle cirNode15;
+
+    @FXML
+    private Circle cirNode11;
+
+    @FXML
+    private Circle cirNode19;
+
+    @FXML
+    private Circle cirNode18;
+
+    @FXML
+    private Circle cirNode21;
+
+    @FXML
+    private Circle cirNode20;
+
+    @FXML
+    private Circle cirNode22;
+
+    @FXML
+    private Circle cirNode23;
+
+    @FXML
+    private Circle cirNode89;
+
+    @FXML
+    private Circle cirNode25;
+
+    @FXML
+    private Circle cirNode27;
+
+    @FXML
+    private Circle cirNode70;
+
+    @FXML
+    private Circle cirNode71;
+
+    @FXML
+    private Circle cirNode72;
+
+    @FXML
+    private Circle cirNode73;
+
+    @FXML
+    private Circle cirNode77;
+
+    @FXML
+    private Circle cirNode78;
+
+    @FXML
+    private Circle cirNode79;
+
+    @FXML
+    private Circle cirNode85;
+
+    @FXML
+    private Circle cirNode84;
+
+    @FXML
+    private Circle cirNode80;
+
+    @FXML
+    private Circle cirNode83;
+
+    @FXML
+    private Circle cirNode90;
+
+    @FXML
+    private Circle cirNode93;
+
+    @FXML
+    private Circle cirNode81;
+
+    @FXML
+    private Circle cirNode91;
+
+    @FXML
+    private Circle cirNode87;
+
+    @FXML
+    private Circle cirNode88;
+
+    @FXML
+    private Circle cirNode86;
+
+    @FXML
+    private Circle cirNode82;
+
+    @FXML
+    private Circle cirNode76;
+
+    @FXML
+    private Circle cirNode74;
+
+    @FXML
+    private Circle cirNode75;
+
+    @FXML
+    private Circle cirNode69;
+
+    @FXML
+    private Circle cirNode68;
+
+    @FXML
+    private Circle cirNode67;
+
+    @FXML
+    private Circle cirNode66;
+
+    @FXML
+    private Circle cirNode96;
+
+    @FXML
+    private Circle cirNode97;
+
+    @FXML
+    private Circle cirNode94;
+
+    @FXML
+    private Circle cirNode95;
+    
+    @FXML
+    private Circle cirNode117;
+    
+    @FXML
+    private Circle cirNode103;
+    
+    public void loadCircleNodes() {
+    	nodes.add(cirNode1);
+    	nodes.add(cirNode2);
+    	nodes.add(cirNode3);
+    	nodes.add(cirNode4);
+    	nodes.add(cirNode5);
+    	nodes.add(cirNode6);
+    	nodes.add(cirNode7);
+    	nodes.add(cirNode8);
+    	nodes.add(cirNode9);
+    	nodes.add(cirNode10);
+    	nodes.add(cirNode11);
+    	nodes.add(cirNode12);
+    	nodes.add(cirNode13);
+    	nodes.add(cirNode14);
+    	nodes.add(cirNode15);
+    	nodes.add(cirNode16);
+    	nodes.add(cirNode17);
+    	nodes.add(cirNode18);
+    	nodes.add(cirNode19);
+    	nodes.add(cirNode20);
+    	nodes.add(cirNode21);
+    	nodes.add(cirNode22);
+    	nodes.add(cirNode23);
+    	nodes.add(cirNode24);
+    	nodes.add(cirNode25);
+    	nodes.add(cirNode26);
+    	nodes.add(cirNode27);
+    	nodes.add(cirNode28);
+    	nodes.add(cirNode29);
+    	nodes.add(cirNode30);
+    	nodes.add(cirNode31);
+    	nodes.add(cirNode32);
+    	nodes.add(cirNode33);
+    	nodes.add(cirNode34);
+    	nodes.add(cirNode35);
+    	nodes.add(cirNode36);
+    	nodes.add(cirNode37);
+    	nodes.add(cirNode38);
+    	nodes.add(cirNode39);
+    	nodes.add(cirNode40);
+    	nodes.add(cirNode41);
+    	nodes.add(cirNode42);
+    	nodes.add(cirNode43);
+    	nodes.add(cirNode45);
+    	nodes.add(cirNode46);
+    	nodes.add(cirNode47);
+    	nodes.add(cirNode48);
+    	nodes.add(cirNode49);
+    	nodes.add(cirNode50);
+    	nodes.add(cirNode51);
+    	nodes.add(cirNode52);
+    	nodes.add(cirNode53);
+    	nodes.add(cirNode54);
+    	nodes.add(cirNode55);
+    	nodes.add(cirNode56);
+    	nodes.add(cirNode57);
+    	nodes.add(cirNode58);
+    	nodes.add(cirNode59);
+    	nodes.add(cirNode60);
+    	nodes.add(cirNode61);
+    	nodes.add(cirNode62);
+    	nodes.add(cirNode63);
+    	nodes.add(cirNode64);
+    	nodes.add(cirNode65);
+    	nodes.add(cirNode66);
+    	nodes.add(cirNode67);
+    	nodes.add(cirNode68);
+    	nodes.add(cirNode69);
+    	nodes.add(cirNode70);
+    	nodes.add(cirNode71);
+    	nodes.add(cirNode72);
+    	nodes.add(cirNode73);
+    	nodes.add(cirNode74);
+    	nodes.add(cirNode75);
+    	nodes.add(cirNode76);
+    	nodes.add(cirNode77);
+    	nodes.add(cirNode78);
+    	nodes.add(cirNode79);
+    	nodes.add(cirNode80);
+    	nodes.add(cirNode81);
+    	nodes.add(cirNode82);
+    	nodes.add(cirNode83);
+    	nodes.add(cirNode84);
+    	nodes.add(cirNode85);
+    	nodes.add(cirNode86);
+    	nodes.add(cirNode87);
+    	nodes.add(cirNode88);
+    	nodes.add(cirNode89);
+    	nodes.add(cirNode90);
+    	nodes.add(cirNode91);
+    	nodes.add(cirNode92);
+    	nodes.add(cirNode93);
+    	nodes.add(cirNode94);
+    	nodes.add(cirNode95);
+    	nodes.add(cirNode96);
+    	nodes.add(cirNode97);
+    	nodes.add(cirNode98);
+    	nodes.add(cirNode99);
+    	nodes.add(cirNode100);
+    	nodes.add(cirNode101);
+    	nodes.add(cirNode102);
+    	nodes.add(cirNode103);
+    	nodes.add(cirNode104);
+    	nodes.add(cirNode105);
+    	nodes.add(cirNode106);
+    	nodes.add(cirNode107);
+    	nodes.add(cirNode108);
+    	nodes.add(cirNode109);
+    	nodes.add(cirNode110);
+    	nodes.add(cirNode111);
+    	nodes.add(cirNode112);
+    	nodes.add(cirNode114);
+    	nodes.add(cirNode115);
+    	nodes.add(cirNode116);
+    	nodes.add(cirNode117);
+    	nodes.add(cirNode118);
+    	nodes.add(cirNode119);
+    	nodes.add(cirNode120);
+    	nodes.add(cirNode121);
+    	nodes.add(cirNode122);
+    	nodes.add(cirNode123);
+    	nodes.add(cirNode124);
+    	nodes.add(cirNode125);
+    	nodes.add(cirNode126);
+    	nodes.add(cirNode127);
+    	nodes.add(cirNode128);
+    	nodes.add(cirNode129);
+    	nodes.add(cirNode130);
+    	nodes.add(cirNode131);
+    	nodes.add(cirNode132);
+    	nodes.add(cirNode133);
+    	nodes.add(cirNode134);
+    	nodes.add(cirNode135);
+    }
+    
+    public void loadLineEdges() {
+    	
+    }
+    
+    
     public IcesiMapGUI(IcesiMap map) {
     	iMap = map;
     	iMap.createIcesiSimpleMap();
