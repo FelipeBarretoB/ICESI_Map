@@ -571,6 +571,7 @@ public class IcesiMapGUI{
 		nodes.add(cirNode110);
 		nodes.add(cirNode111);
 		nodes.add(cirNode112);
+		nodes.add(null);
 		nodes.add(cirNode114);
 		nodes.add(cirNode115);
 		nodes.add(cirNode116);

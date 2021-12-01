@@ -138,7 +138,7 @@
       <Circle fx:id="cirNode76" fill="DODGERBLUE" layoutX="407.0" layoutY="210.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="cirNode74" fill="DODGERBLUE" layoutX="326.0" layoutY="241.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="cirNode75" fill="DODGERBLUE" layoutX="362.0" layoutY="241.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="cirNode69" fill="DODGERBLUE" layoutX="412.0" layoutY="246.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode69" fill="DODGERBLUE" layoutX="414.0" layoutY="247.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="cirNode68" fill="DODGERBLUE" layoutX="417.0" layoutY="276.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="cirNode67" fill="DODGERBLUE" layoutX="422.0" layoutY="306.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="cirNode66" fill="DODGERBLUE" layoutX="427.0" layoutY="345.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
@@ -326,9 +326,15 @@
       <Line fx:id="lnEdge51to631111" endX="-275.0" endY="-290.0" layoutX="516.0" layoutY="600.0" startX="-262.0" startY="-290.0" stroke="#0062ff" />
       <Line fx:id="lnEdge51to6311111" endX="-346.0" endY="-318.0" layoutX="556.0" layoutY="631.0" startX="-356.0" startY="-318.0" stroke="#0062ff" />
       <Line fx:id="lnEdge51to63111111" endX="-319.0" endY="-337.0" layoutX="536.0" layoutY="620.0" startX="-319.0" startY="-319.0" stroke="#0062ff" />
-      <Line fx:id="lnEdge51to63111112" endX="-315.0" endY="-289.0" layoutX="566.0" layoutY="641.0" startX="-315.0" startY="-329.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to63111112" endX="-315.0" endY="-289.0" layoutX="566.0" layoutY="641.0" startX="-311.5" startY="-330.5" stroke="#0062ff" />
       <Line fx:id="lnEdge51to631111121" endX="-286.0" endY="-328.0" layoutX="576.0" layoutY="651.0" startX="-315.0" startY="-341.0" stroke="#0062ff" />
-      <Line fx:id="lnEdge51to6311111211" endX="-335.0" endY="-406.0" layoutX="585.0" layoutY="664.0" startX="-326.0" startY="-357.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to6311111211" endX="-320.0" endY="-425.0" layoutX="585.0" layoutY="664.0" startX="-326.0" startY="-357.0" stroke="#0062ff" />
       <Label layoutX="10.0" layoutY="688.0" prefHeight="17.0" prefWidth="649.0" text="Yellow:Start, AqruaMarine: path, Green: Destination " />
+      <Line endX="-418.0" endY="-448.0" layoutX="604.0" layoutY="614.0" startX="-403.0" startY="-448.0" stroke="#0062ff" />
+      <Line endX="-403.0" endY="-382.0" layoutX="614.0" layoutY="624.0" startX="-406.0" startY="-459.0" stroke="#0062ff" />
+      <Line endX="-208.0" endY="-414.0" layoutX="614.0" layoutY="624.0" startX="-249.0" startY="-383.0" stroke="#0062ff" />
+      <Line endX="-117.0" endY="-298.0" layoutX="614.0" layoutY="624.0" startX="-117.0" startY="-271.0" stroke="#0062ff" />
+      <Line endX="-502.0" endY="-246.0" layoutX="624.0" layoutY="634.0" startX="-489.0" startY="-263.0" stroke="#0062ff" />
+      <Line endX="-370.0" endY="-279.0" layoutX="624.0" layoutY="634.0" startX="-370.0" startY="-224.0" stroke="#0062ff" />
    </children>
 </Pane>
