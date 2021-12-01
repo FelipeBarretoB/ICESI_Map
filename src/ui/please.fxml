@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="675.0" fitWidth="692.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -328,5 +329,6 @@
       <Line fx:id="lnEdge51to63111112" endX="-315.0" endY="-289.0" layoutX="566.0" layoutY="641.0" startX="-315.0" startY="-329.0" stroke="#0062ff" />
       <Line fx:id="lnEdge51to631111121" endX="-286.0" endY="-328.0" layoutX="576.0" layoutY="651.0" startX="-315.0" startY="-341.0" stroke="#0062ff" />
       <Line fx:id="lnEdge51to6311111211" endX="-335.0" endY="-406.0" layoutX="585.0" layoutY="664.0" startX="-326.0" startY="-357.0" stroke="#0062ff" />
+      <Label layoutX="10.0" layoutY="688.0" prefHeight="17.0" prefWidth="649.0" text="Yellow:Start, AqruaMarine: path, Green: Destination " />
    </children>
 </Pane>
