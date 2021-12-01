@@ -1,8 +1,5 @@
 package ui;
 
-import dataStructureGraph.Edge;
-import dataStructureGraph.SimpleGraph;
-import dataStructureGraph.Vertex;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,44 +9,20 @@ import javafx.stage.StageStyle;
 import model.IcesiMap;
 
 public class Main extends Application{
-	private SimpleGraph<Integer> g;
 	private IcesiMap iMap;
 	private IcesiMapGUI imGUI;
 	private double xOffset = 0;
     private double yOffset = 0;
 	
 	public Main() {
-		g = new SimpleGraph<>();
 		iMap = new IcesiMap();
 		imGUI = new IcesiMapGUI(iMap);
 	}
 	
 	public static void main(String[] args) {
-		/*Main ppal = new Main();
-		ppal.start();*/
 		launch(args);
 	}
-	
-	/*public void start() {
-		/*Vertex<Integer> v = new Vertex<>(12, "");
-		g.addVertex(v);
-		v = new Vertex<>(10, "");
-		g.addVertex(v);
-		v = new Vertex<>(15, "");
-		g.addVertex(v);
-		
-		System.out.println(g.getNodes());
-		
-		Edge<Integer> e = new Edge<>(5, g.getNodes().get(0), g.getNodes().get(1));
-		g.addEdge(e);
-		e = new Edge<>(8, g.getNodes().get(0), g.getNodes().get(2));
-		g.addEdge(e);
-		e = new Edge<>(2, g.getNodes().get(1), g.getNodes().get(2));
-		g.addEdge(e);
-		
-		System.out.println(g.getEdges());*/
-		//launch(args);
-	//}
+
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {

@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import dataStructureGraph.Vertex;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-//import dataStructureGraph.Vertex;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,7 +32,7 @@ public class IcesiMapGUI{
 	@FXML
 	private ChoiceBox<String> choiceGraph;
 
-	private String graph;
+	/*private String graph;*/
 
 	@FXML
 	private ComboBox<String> cbOrigin;
@@ -627,7 +626,7 @@ public class IcesiMapGUI{
 	@FXML
 	public void loadDistances(ActionEvent event) {
 		if (!choiceGraph.getSelectionModel().getSelectedItem().equals("")) {
-			graph = choiceGraph.getSelectionModel().getSelectedItem();
+			/*graph = choiceGraph.getSelectionModel().getSelectedItem();*/
 			try {
 				loadPage("distances.fxml");
 				chargeFloyd();
@@ -792,10 +791,11 @@ public class IcesiMapGUI{
 		Parent pane = fxmlLoader.load();
 		mainPane.setCenter(pane);
 	}
+	
 	@FXML
 	public void loadProcess(ActionEvent event) {
 		if (!choiceGraph.getSelectionModel().getSelectedItem().equals("")) {
-			graph = choiceGraph.getSelectionModel().getSelectedItem();
+			/*graph = choiceGraph.getSelectionModel().getSelectedItem();*/
 			try {
 				loadPage("case_pane.fxml");
 			} catch (IOException e) {
@@ -885,8 +885,6 @@ public class IcesiMapGUI{
 		}
 		nodes.get(solution.get(solution.size()-1)).setFill(Color.GREEN);;
 	}
-
-
 
 	public void resetColorMap() {
 

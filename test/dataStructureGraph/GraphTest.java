@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 class GraphTest {
 	
 	private SimpleGraph<Integer> graph;
-	private ArrayList<ArrayList<Vertex>> ans;
 	
 	void setupScenario1() {
 		graph = new SimpleGraph<>();
@@ -41,43 +40,6 @@ class GraphTest {
 		graph.addEdge(e);
 		
 	}
-	
-	void setupScenario3() {
-		ans = new ArrayList<ArrayList<Vertex>>();;
-		ArrayList<Vertex> tem;
-		
-		//se ponen los caminos de c para todos los nodos
-		tem = new ArrayList<Vertex>();
-		tem.add(graph.getNodes().get(2));
-		tem.add(graph.getNodes().get(0));
-		
-		ans.add(tem);
-		
-		tem = new ArrayList<Vertex>();
-		tem.add(graph.getNodes().get(2));
-		tem.add(graph.getNodes().get(0));
-		tem.add(graph.getNodes().get(1));
-		
-		ans.add(tem);
-		
-		tem = new ArrayList<Vertex>();
-		tem.add(graph.getNodes().get(2));
-		
-		ans.add(tem);
-		
-		tem = new ArrayList<Vertex>();
-		tem.add(graph.getNodes().get(2));
-		tem.add(graph.getNodes().get(3));
-		
-		ans.add(tem);
-		
-		tem = new ArrayList<Vertex>();
-		tem.add(graph.getNodes().get(2));
-		tem.add(graph.getNodes().get(4));
-		
-		ans.add(tem);
-	}
-	
 	@Test
 	public void testAddVertex() {
 		setupScenario1();
