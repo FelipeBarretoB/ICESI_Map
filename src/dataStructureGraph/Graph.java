@@ -245,7 +245,7 @@ public abstract class Graph<T> {
 	// Si se hace sort, etc.
 	public int returnPos(Vertex<T> v/*, ArrayList<Vertex<T>> nodes*/) {
 		boolean found = false;
-		int index = 0;
+		int index = -1;
 		for (int i = 0; i < nodes.size() && !found; i++) {
 			if (nodes.get(i) == v) {
 				index = i;
