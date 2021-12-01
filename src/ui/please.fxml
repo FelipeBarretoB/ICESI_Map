@@ -4,7 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
-
+<?import javafx.scene.shape.Line?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -13,7 +13,320 @@
             <Image url="@../../assets/Mapa_ICESI.png" />
          </image>
       </ImageView>
-      <Circle fill="DODGERBLUE" layoutX="64.0" layoutY="464.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="DODGERBLUE" layoutX="167.0" layoutY="458.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode112" fill="DODGERBLUE" layoutX="55.0" layoutY="471.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode109" fill="DODGERBLUE" layoutX="201.0" layoutY="466.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode114" fill="DODGERBLUE" layoutX="75.0" layoutY="388.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode100" fill="DODGERBLUE" layoutX="122.0" layoutY="354.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode57" fill="DODGERBLUE" layoutX="171.0" layoutY="382.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode40" fill="DODGERBLUE" layoutX="217.0" layoutY="309.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode55" fill="DODGERBLUE" layoutX="229.0" layoutY="373.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode61" fill="DODGERBLUE" layoutX="235.0" layoutY="432.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode131" fill="DODGERBLUE" layoutX="73.0" layoutY="210.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode14" fill="DODGERBLUE" layoutX="132.0" layoutY="189.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode13" fill="DODGERBLUE" layoutX="130.0" layoutY="252.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode17" fill="DODGERBLUE" layoutX="117.0" layoutY="119.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode26" fill="DODGERBLUE" layoutX="191.0" layoutY="91.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode31" fill="DODGERBLUE" layoutX="208.0" layoutY="165.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode48" fill="DODGERBLUE" layoutX="244.0" layoutY="237.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode64" fill="DODGERBLUE" layoutX="341.0" layoutY="323.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode92" fill="DODGERBLUE" layoutX="360.0" layoutY="128.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode123" fill="DODGERBLUE" layoutX="303.0" layoutY="504.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode126" fill="DODGERBLUE" layoutX="378.0" layoutY="538.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode110" fill="DODGERBLUE" layoutX="51.0" layoutY="432.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode108" fill="DODGERBLUE" layoutX="142.0" layoutY="432.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode107" fill="DODGERBLUE" layoutX="135.0" layoutY="415.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode111" fill="DODGERBLUE" layoutX="52.0" layoutY="419.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode106" fill="DODGERBLUE" layoutX="98.0" layoutY="402.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode105" fill="DODGERBLUE" layoutX="121.0" layoutY="388.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode104" fill="DODGERBLUE" layoutX="98.0" layoutY="378.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode115" fill="DODGERBLUE" layoutX="39.0" layoutY="388.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode116" fill="DODGERBLUE" layoutX="40.0" layoutY="345.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode59" fill="DODGERBLUE" layoutX="196.0" layoutY="419.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode60" fill="DODGERBLUE" layoutX="223.0" layoutY="413.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode62" fill="DODGERBLUE" layoutX="254.0" layoutY="410.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode120" fill="DODGERBLUE" layoutX="256.0" layoutY="464.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode122" fill="DODGERBLUE" layoutX="285.0" layoutY="487.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode124" fill="DODGERBLUE" layoutX="350.0" layoutY="487.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode119" fill="DODGERBLUE" layoutX="255.0" layoutY="440.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode121" fill="DODGERBLUE" layoutX="265.0" layoutY="484.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode129" fill="DODGERBLUE" layoutX="286.0" layoutY="408.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode125" fill="DODGERBLUE" layoutX="352.0" layoutY="529.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode128" fill="DODGERBLUE" layoutX="305.0" layoutY="415.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode134" fill="DODGERBLUE" layoutX="324.0" layoutY="426.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode135" fill="DODGERBLUE" layoutX="323.0" layoutY="413.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode127" fill="DODGERBLUE" layoutX="355.0" layoutY="426.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode130" fill="DODGERBLUE" layoutX="354.0" layoutY="411.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode133" fill="DODGERBLUE" layoutX="354.0" layoutY="393.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode132" fill="DODGERBLUE" layoutX="322.0" layoutY="393.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode65" fill="DODGERBLUE" layoutX="364.0" layoutY="346.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode63" fill="DODGERBLUE" layoutX="294.0" layoutY="328.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode51" fill="DODGERBLUE" layoutX="251.0" layoutY="354.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode47" fill="DODGERBLUE" layoutX="264.0" layoutY="238.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode45" fill="DODGERBLUE" layoutX="246.0" layoutY="219.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode46" fill="DODGERBLUE" layoutX="250.0" layoutY="255.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode34" fill="DODGERBLUE" layoutX="230.0" layoutY="256.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode32" fill="DODGERBLUE" layoutX="211.0" layoutY="243.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode50" fill="DODGERBLUE" layoutX="256.0" layoutY="309.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode49" fill="DODGERBLUE" layoutX="219.0" layoutY="279.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode39" fill="DODGERBLUE" layoutX="197.0" layoutY="313.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode42" fill="DODGERBLUE" layoutX="218.0" layoutY="352.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode41" fill="DODGERBLUE" layoutX="237.0" layoutY="310.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode52" fill="DODGERBLUE" layoutX="197.0" layoutY="349.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode53" fill="DODGERBLUE" layoutX="186.0" layoutY="355.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode116" fill="DODGERBLUE" layoutX="20.0" layoutY="386.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode118" fill="DODGERBLUE" layoutX="21.0" layoutY="366.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode102" fill="DODGERBLUE" layoutX="93.0" layoutY="350.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode101" fill="DODGERBLUE" layoutX="137.0" layoutY="371.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode58" fill="DODGERBLUE" layoutX="181.0" layoutY="403.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode54" fill="DODGERBLUE" layoutX="187.0" layoutY="370.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode56" fill="DODGERBLUE" layoutX="165.0" layoutY="365.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode99" fill="DODGERBLUE" layoutX="127.0" layoutY="335.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode98" fill="DODGERBLUE" layoutX="142.0" layoutY="315.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode43" fill="DODGERBLUE" layoutX="231.0" layoutY="196.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode33" fill="DODGERBLUE" layoutX="230.0" layoutY="173.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode24" fill="DODGERBLUE" layoutX="209.0" layoutY="139.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode28" fill="DODGERBLUE" layoutX="180.0" layoutY="195.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode29" fill="DODGERBLUE" layoutX="180.0" layoutY="169.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode30" fill="DODGERBLUE" layoutX="179.0" layoutY="233.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode16" fill="DODGERBLUE" layoutX="177.0" layoutY="263.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode38" fill="DODGERBLUE" layoutX="162.0" layoutY="299.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode36" fill="DODGERBLUE" layoutX="130.0" layoutY="281.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode37" fill="DODGERBLUE" layoutX="129.0" layoutY="300.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode35" fill="DODGERBLUE" layoutX="98.0" layoutY="275.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode10" fill="DODGERBLUE" layoutX="98.0" layoutY="256.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode6" fill="DODGERBLUE" layoutX="91.0" layoutY="229.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode12" fill="DODGERBLUE" layoutX="130.0" layoutY="213.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode4" fill="DODGERBLUE" layoutX="71.0" layoutY="229.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode1" fill="DODGERBLUE" layoutX="51.0" layoutY="229.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode2" fill="DODGERBLUE" layoutX="52.0" layoutY="208.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode3" fill="DODGERBLUE" layoutX="53.0" layoutY="190.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode7" fill="DODGERBLUE" layoutX="94.0" layoutY="211.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode8" fill="DODGERBLUE" layoutX="93.0" layoutY="192.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode5" fill="DODGERBLUE" layoutX="73.0" layoutY="190.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode9" fill="DODGERBLUE" layoutX="53.0" layoutY="166.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode15" fill="DODGERBLUE" layoutX="132.0" layoutY="167.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode11" fill="DODGERBLUE" layoutX="103.0" layoutY="180.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode19" fill="DODGERBLUE" layoutX="101.0" layoutY="165.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode18" fill="DODGERBLUE" layoutX="101.0" layoutY="147.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode21" fill="DODGERBLUE" layoutX="73.0" layoutY="119.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode20" fill="DODGERBLUE" layoutX="95.0" layoutY="120.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode22" fill="DODGERBLUE" layoutX="140.0" layoutY="112.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode23" fill="DODGERBLUE" layoutX="169.0" layoutY="131.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode89" fill="DODGERBLUE" layoutX="192.0" layoutY="19.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode25" fill="DODGERBLUE" layoutX="150.0" layoutY="66.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode27" fill="DODGERBLUE" layoutX="212.0" layoutY="61.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode70" fill="DODGERBLUE" layoutX="287.0" layoutY="246.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode71" fill="DODGERBLUE" layoutX="277.0" layoutY="221.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode72" fill="DODGERBLUE" layoutX="290.0" layoutY="221.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode73" fill="DODGERBLUE" layoutX="295.0" layoutY="233.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode77" fill="DODGERBLUE" layoutX="295.0" layoutY="200.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode78" fill="DODGERBLUE" layoutX="312.0" layoutY="209.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode79" fill="DODGERBLUE" layoutX="314.0" layoutY="193.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode85" fill="DODGERBLUE" layoutX="314.0" layoutY="159.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode84" fill="DODGERBLUE" layoutX="317.0" layoutY="118.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode80" fill="DODGERBLUE" layoutX="380.0" layoutY="192.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode83" fill="DODGERBLUE" layoutX="388.0" layoutY="81.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode90" fill="DODGERBLUE" layoutX="351.0" layoutY="97.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode93" fill="DODGERBLUE" layoutX="388.0" layoutY="129.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode81" fill="DODGERBLUE" layoutX="387.0" layoutY="165.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode91" fill="DODGERBLUE" layoutX="350.0" layoutY="163.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode87" fill="DODGERBLUE" layoutX="289.0" layoutY="117.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode88" fill="DODGERBLUE" layoutX="298.0" layoutY="42.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode86" fill="DODGERBLUE" layoutX="304.0" layoutY="109.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode82" fill="DODGERBLUE" layoutX="406.0" layoutY="168.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode76" fill="DODGERBLUE" layoutX="407.0" layoutY="210.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode74" fill="DODGERBLUE" layoutX="326.0" layoutY="241.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode75" fill="DODGERBLUE" layoutX="362.0" layoutY="241.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode69" fill="DODGERBLUE" layoutX="412.0" layoutY="246.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode68" fill="DODGERBLUE" layoutX="417.0" layoutY="276.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode67" fill="DODGERBLUE" layoutX="422.0" layoutY="306.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode66" fill="DODGERBLUE" layoutX="427.0" layoutY="345.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode96" fill="DODGERBLUE" layoutX="605.0" layoutY="342.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode97" fill="DODGERBLUE" layoutX="569.0" layoutY="359.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode94" fill="DODGERBLUE" layoutX="496.0" layoutY="355.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirNode95" fill="DODGERBLUE" layoutX="496.0" layoutY="325.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="lnEdge1to2" endX="-33.70710754394531" endY="-6.0" layoutX="85.0" layoutY="216.0" startX="-33.707122802734375" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge2to3" endX="-33.70710754394531" endY="-6.0" layoutX="87.0" layoutY="198.0" startX="-33.707122802734375" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge3to9" endX="-33.70710754394531" endY="-6.0" layoutX="87.0" layoutY="178.0" startX="-33.707122802734375" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge4to131" endX="-33.70710754394531" endY="-6.0" layoutX="105.0" layoutY="220.0" startX="-33.707122802734375" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge131to5" endX="-33.70710754394531" endY="-6.0" layoutX="107.0" layoutY="198.0" startX="-33.707122802734375" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge6to7" endX="-33.70710754394531" endY="-6.0" layoutX="126.0" layoutY="219.0" startX="-33.707122802734375" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge8to7" endX="-33.70710754394531" endY="-6.0" layoutX="127.0" layoutY="200.0" startX="-33.707122802734375" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge19to18" endX="-33.70710754394531" endY="-6.0" layoutX="135.0" layoutY="156.0" startX="-33.707122802734375" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge11to19" endX="-33.70710754394531" endY="-6.0" layoutX="135.0" layoutY="173.0" startX="-33.707122802734375" startY="7.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge18to20" endX="-40.0" endY="-15.0" layoutX="135.0" layoutY="135.0" startX="-33.707122802734375" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge21to20" endX="-67.0" endY="-26.0" layoutX="145.0" layoutY="145.0" startX="-53.0" startY="-26.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge20to17" endX="-46.0" endY="-25.0" layoutX="145.0" layoutY="145.0" startX="-32.0" startY="-25.000015258789062" stroke="#0062ff" />
+      <Line fx:id="lnEdge17to22" endX="-20.0" endY="-30.0" layoutX="145.0" layoutY="145.0" startX="-7.0" startY="-29.999984741210938" stroke="#0062ff" />
+      <Line fx:id="lnEdge22to23" endX="-1.0" endY="-31.0" layoutX="145.0" layoutY="145.0" startX="21.0" startY="-15.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge22to25" endX="-3.0" endY="-37.0" layoutX="145.0" layoutY="145.0" startX="4.0" startY="-77.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge27to89" endX="64.0" endY="-89.0" layoutX="146.0" layoutY="144.0" startX="47.0" startY="-117.00000762939453" stroke="#0062ff" />
+      <Line fx:id="lnEdge11to14" endX="-39.0" endY="36.0" layoutX="145.0" layoutY="145.0" startX="-19.0" startY="44.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge5to8" endX="-25.0" endY="-17.0" layoutX="117.0" layoutY="208.0" startX="-41.0" startY="-17.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge3to5" endX="-58.0" endY="-28.0" layoutX="127.0" layoutY="218.0" startX="-71.0" startY="-28.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge4to6" endX="-39.0" endY="12.0" layoutX="127.0" layoutY="218.0" startX="-52.0" startY="12.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge1to4" endX="-58.0" endY="11.0" layoutX="127.0" layoutY="218.0" startX="-73.0" startY="11.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge131to7" endX="-34.0" endY="-7.0" layoutX="127.0" layoutY="218.0" startX="-48.0" startY="-7.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge2to131" endX="-59.0" endY="-8.0" layoutX="127.0" layoutY="218.0" startX="-74.0" startY="-8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge7to12" endX="-30.0" endY="-4.0" layoutX="127.0" layoutY="215.0" startY="-4.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge6to10" endX="-29.0" endY="38.0" layoutX="127.0" layoutY="218.0" startX="-36.0" startY="15.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge10to35" endX="-29.0" endY="54.0" layoutX="127.0" layoutY="218.0" startX="-29.0" startY="37.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge35to36" endX="-11.0" endY="48.0" layoutX="137.0" layoutY="228.0" startX="-34.0" startY="48.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge10to13" endX="-34.0" endY="24.0" layoutX="137.0" layoutY="231.0" startX="-14.0" startY="24.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge13to36" endX="-7.0" endY="50.0" layoutX="137.0" layoutY="228.0" startX="-7.0" startY="32.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge12to13" endX="-6.0" endY="15.0" layoutX="137.0" layoutY="228.0" startX="-6.0" startY="-12.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge14to12" endX="-15.0" endY="-31.0" layoutX="147.0" layoutY="238.0" startX="-15.0" startY="-44.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge14to15" endX="-16.0" endY="-55.0" layoutX="147.0" layoutY="238.0" startX="-16.0" startY="-69.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge19to15" endX="-42.0" endY="-72.0" layoutX="147.0" layoutY="238.0" startX="-22.0" startY="-72.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge29to15" endX="-19.0" endY="-81.0" layoutX="157.0" layoutY="248.0" startX="20.0" startY="-81.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge15to23" endX="-34.0" endY="-92.0" layoutX="167.0" layoutY="258.0" startX="-2.0" startY="-123.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge23to24" endX="-6.0" endY="-136.0" layoutX="177.0" layoutY="268.0" startX="27.0" startY="-128.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge23to26" endX="-7.0" endY="-138.0" layoutX="177.0" layoutY="268.0" startX="10.0" startY="-171.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge24to27" endX="35.0" endY="-134.0" layoutX="177.0" layoutY="268.0" startX="35.0" startY="-202.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge26to27" endX="20.0" endY="-185.0" layoutX="177.0" layoutY="268.0" startX="34.0" startY="-207.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge25to27" endX="-23.0" endY="-201.0" layoutX="177.0" layoutY="268.0" startX="35.0" startY="-208.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge88to89" endX="19.0" endY="-247.0" layoutX="177.0" layoutY="268.0" startX="118.0" startY="-229.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge36to37" endX="-49.0" endY="13.0" layoutX="177.0" layoutY="268.0" startX="-49.0" startY="30.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge37to98" endX="-57.0" endY="23.0" layoutX="187.0" layoutY="280.0" startX="-49.0" startY="30.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge38to98" endX="-46.0" endY="25.0" layoutX="197.0" layoutY="290.0" startX="-37.0" startY="9.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge37to38" endX="-75.0" layoutX="207.0" layoutY="300.0" startX="-48.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge38to39" endX="-42.0" endY="1.0" layoutX="207.0" layoutY="300.0" startX="-16.0" startY="13.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge52to39" endX="-19.0" endY="6.0" layoutX="217.0" layoutY="310.0" startX="-19.0" startY="34.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge98to99" endX="-99.0" endY="11.0" layoutX="227.0" layoutY="320.0" startX="-90.0" startY="-1.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge99to100" endX="-116.0" endY="16.0" layoutX="237.0" layoutY="330.0" startX="-109.0" startY="8.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge100to102" endX="-141.0" endY="23.0" layoutX="237.0" layoutY="330.0" startX="-121.0" startY="23.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge102to103" endX="-155.0" endY="14.0" layoutX="249.0" layoutY="340.0" startX="-155.0" startY="22.0" stroke="#0062ff" />
+      <Circle fx:id="cirNode103" fill="DODGERBLUE" layoutX="95.0" layoutY="364.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="lnEdge104to103" endX="-162.0" endY="18.0" layoutX="259.0" layoutY="350.0" startX="-162.0" startY="26.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge104to106" endX="-170.0" endY="20.0" layoutX="269.0" layoutY="360.0" startX="-170.0" startY="41.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge114to106" endX="-183.0" endY="33.0" layoutX="279.0" layoutY="370.0" startX="-199.0" startY="20.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge114to104" endX="-209.0" endY="5.0" layoutX="289.0" layoutY="380.0" startX="-193.0" startY="-1.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge104to105" endX="-198.0" endY="-10.0" layoutX="299.0" layoutY="390.0" startX="-181.0" startY="-3.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge106to105" endX="-185.0" endY="-9.0" layoutX="309.0" layoutY="400.0" startX="-208.0" startY="2.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge102to116" endX="-219.0" endY="-48.0" layoutX="309.0" layoutY="400.0" startX="-267.0" startY="-55.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge115to116" endX="-281.0" endY="-61.0" layoutX="319.0" layoutY="410.0" startX="-281.0" startY="-24.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge117to118" endX="-308.0" endY="-52.0" layoutX="329.0" layoutY="420.0" startX="-308.0" startY="-34.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge114to115" endX="-297.0" endY="-39.0" layoutX="339.0" layoutY="428.0" startX="-272.0" startY="-39.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge117to115" endX="-327.0" endY="-52.0" layoutX="349.0" layoutY="439.0" startX="-313.0" startY="-52.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge117to111" endX="-321.0" endY="-59.0" layoutX="359.0" layoutY="449.0" startX="-307.0" startY="-30.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge111to107" endX="-312.0" endY="-37.0" layoutX="369.0" layoutY="458.0" startX="-239.0" startY="-44.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge108to110" endX="-312.0" endY="-37.0" layoutX="367.0" layoutY="470.0" startX="-229.0" startY="-37.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge111to110" endX="-326.0" endY="-57.0" layoutX="377.0" layoutY="480.0" startX="-326.0" startY="-50.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge106to107" endX="-248.0" endY="-75.0" layoutX="387.0" layoutY="490.0" startX="-287.0" startY="-85.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge108to59" endX="-248.0" endY="-75.0" layoutX="397.0" layoutY="506.0" startX="-207.0" startY="-86.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge107to108" endX="-265.0" endY="-87.0" layoutX="407.0" layoutY="516.0" startX="-271.0" startY="-98.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge109to112" endX="-357.0" endY="-53.0" layoutX="417.0" layoutY="526.0" startX="-224.0" startY="-62.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge110to112" endX="-376.0" endY="-101.0" layoutX="427.0" layoutY="536.0" startX="-376.0" startY="-71.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge109to108" endX="-292.0" endY="-114.0" layoutX="437.0" layoutY="546.0" startX="-236.0" startY="-84.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge109to59" endX="-245.29290771484375" endY="-93.29287719726562" layoutX="447.0" layoutY="556.0" startX="-251.0" startY="-132.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge58to59" endX="-265.0" endY="-149.0" layoutX="457.0" layoutY="566.0" startX="-275.0" startY="-163.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge58to57" endX="-284.0" endY="-177.0" layoutX="463.0" layoutY="576.0" startX="-291.0" startY="-187.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge56to57" endX="-301.0" endY="-209.0" layoutX="473.0" layoutY="586.0" startX="-307.0" startY="-218.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge101to56" endX="-321.0" endY="-232.0" layoutX="483.0" layoutY="596.0" startX="-342.0" startY="-224.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge100to101" endX="-356.0" endY="-235.0" layoutX="493.0" layoutY="606.0" startX="-366.0" startY="-245.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge56to54" endX="-230.0" endY="-136.0" layoutX="397.0" layoutY="500.0" startX="-212.0" startY="-130.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge54to53" endX="-211.0" endY="-130.0" layoutX="397.0" layoutY="500.0" startX="-211.0" startY="-143.0" stroke="#0062ff" />
+      <Line endX="-209.0" endY="-144.0" layoutX="397.0" layoutY="500.0" startX="-200.0" startY="-151.0" stroke="#0062ff" />
+      <Line endX="-198.0" endY="-148.0" layoutX="397.0" layoutY="500.0" startX="-181.0" startY="-148.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge55to54" endX="-207.0" endY="-132.0" layoutX="397.0" layoutY="503.0" startX="-175.0" startY="-132.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge55to60" endX="-173.0" endY="-91.0" layoutX="396.0" layoutY="499.0" startX="-167.0" startY="-118.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge60to59" endX="-209.0" endY="-89.0" layoutX="406.0" layoutY="509.0" startX="-185.0" startY="-96.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge60to61" endX="-183.0" endY="-96.0" layoutX="406.0" layoutY="509.0" startX="-173.0" startY="-82.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge60to62" endX="-155.0" endY="-97.0" layoutX="406.0" layoutY="509.0" startX="-181.0" startY="-97.0" stroke="#0062ff" />
+      <Line endX="-124.0" endY="-99.0" layoutX="406.0" layoutY="509.0" startX="-149.0" startY="-99.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge62to119" endX="-150.0" endY="-69.0" layoutX="406.0" layoutY="509.0" startX="-150.0" startY="-98.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge120to119" endX="-149.0" endY="-47.0" layoutX="406.0" layoutY="509.0" startX="-149.0" startY="-68.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge8to11" endX="-44.0" endY="-2.0" layoutX="145.0" layoutY="183.0" startX="-50.0" startY="7.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge15to17" endX="-44.0" endY="-104.0" layoutX="175.0" layoutY="268.0" startX="-56.0" startY="-142.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge101to57" endX="-331.0" endY="-224.0" layoutX="493.0" layoutY="606.0" startX="-354.0" startY="-232.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge62to61" endX="-176.0" endY="-93.0" layoutX="416.0" layoutY="519.0" startX="-165.0" startY="-104.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge120to121" endX="-151.0" endY="-35.0" layoutX="416.0" layoutY="519.0" startX="-159.0" startY="-54.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge122to121" endX="-143.0" endY="-40.0" layoutX="426.0" layoutY="526.0" startX="-159.0" startY="-40.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge122to123" endX="-142.0" endY="-32.0" layoutX="438.0" layoutY="534.0" startX="-152.0" startY="-44.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge122to128" endX="-161.0" endY="-61.0" layoutX="448.0" layoutY="544.0" startX="-144.0" startY="-126.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge122to124" endX="-113.0" endY="-65.0" layoutX="458.0" layoutY="554.0" startX="-167.0" startY="-65.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge125to124" endX="-113.0" endY="-38.0" layoutX="465.0" layoutY="564.0" startX="-113.0" startY="-71.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge125to126" endX="-105.0" endY="-38.0" layoutX="475.0" layoutY="575.0" startX="-120.0" startY="-45.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge124to127" endX="-131.0" endY="-102.0" layoutX="483.0" layoutY="585.0" startX="-131.0" startY="-155.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge134to127" endX="-165.0" endY="-168.0" layoutX="493.0" layoutY="595.0" startX="-142.0" startY="-168.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge135to130" endX="-165.0" endY="-168.0" layoutX="492.0" layoutY="581.0" startX="-142.0" startY="-168.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge134to135" endX="-180.0" endY="-180.0" layoutX="503.0" layoutY="605.0" startX="-180.0" startY="-189.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge130to133" endX="-180.0" endY="-180.0" layoutX="534.0" layoutY="586.0" startX="-180.0" startY="-189.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge132to133" endX="-165.0" endY="-168.0" layoutX="491.0" layoutY="561.0" startX="-142.0" startY="-168.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge129to128" endX="-165.0" endY="-168.0" layoutX="453.0" layoutY="576.0" startX="-149.0" startY="-160.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge135to128" endX="-194.0" endY="-177.0" layoutX="502.0" layoutY="591.0" startX="-182.0" startY="-177.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge129to132" endX="-212.0" endY="-180.0" layoutX="501.0" layoutY="588.0" startX="-181.0" startY="-195.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge132to65" endX="-179.0" endY="-183.0" layoutX="501.0" layoutY="574.0" startX="-141.0" startY="-226.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge64to65" endX="-145.0" endY="-218.0" layoutX="507.0" layoutY="562.0" startX="-163.0" startY="-237.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge64to63" endX="-217.0" endY="-246.0" layoutX="517.0" layoutY="574.0" startX="-179.0" startY="-253.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to63" endX="-214.0" endY="-217.0" layoutX="468.0" layoutY="570.0" startX="-182.0" startY="-239.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge65to66" endX="-160.0" endY="-238.0" layoutX="527.0" layoutY="584.0" startX="-104.0" startY="-238.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge67to66" endX="-109.0" endY="-254.0" layoutX="536.0" layoutY="594.0" startX="-114.0" startY="-285.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge94to66" endX="-53.0" endY="-248.0" layoutX="546.0" layoutY="604.0" startX="-116.0" startY="-258.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge94to97" endX="-53.0" endY="-248.0" layoutX="618.0" layoutY="608.0" startX="-117.0" startY="-254.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge67to95" endX="-49.0" endY="-232.0" layoutX="540.0" layoutY="558.0" startX="-115.5" startY="-249.70709228515625" stroke="#0062ff" />
+      <Line fx:id="lnEdge96to95" endX="-17.0" endY="-231.0" layoutX="615.0" layoutY="573.0" startX="-114.0" startY="-247.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge96to97" endX="-26.0" endY="-234.0" layoutX="625.0" layoutY="583.0" startX="-52.0" startY="-224.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge67to68" endX="-106.0" endY="-262.0" layoutX="529.0" layoutY="565.0" startX="-114.0" startY="-285.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge69to68" endX="-106.0" endY="-263.0" layoutX="524.0" layoutY="534.0" startX="-112.0" startY="-284.0" stroke="#0062ff" />
+      <Line endX="-122.0" endY="-302.0" layoutX="534.0" layoutY="544.0" startX="-128.0" startY="-331.0" stroke="#0062ff" />
+      <Line endX="-139.0" endY="-348.0" layoutX="544.0" layoutY="554.0" startX="-139.0" startY="-382.0" stroke="#0062ff" />
+      <Line endX="-190.0" endY="-323.0" layoutX="554.0" layoutY="564.0" startX="-146.0" startY="-316.0" stroke="#0062ff" />
+      <Line endX="-234.0" endY="-332.0" layoutX="564.0" layoutY="574.0" startX="-205.0" startY="-332.0" stroke="#0062ff" />
+      <Line endX="-278.0" endY="-350.0" layoutX="574.0" layoutY="584.0" startX="-253.0" startY="-343.0" stroke="#0062ff" />
+      <Line endX="-295.0" endY="-350.0" layoutX="584.0" layoutY="596.0" startX="-258.0" startY="-355.0" stroke="#0062ff" />
+      <Line endX="-319.0" endY="-353.0" layoutX="585.0" layoutY="591.0" startX="-301.0" startY="-346.0" stroke="#0062ff" />
+      <Line endX="-306.0" endY="-371.0" layoutX="584.0" layoutY="594.0" startX="-298.0" startY="-348.0" stroke="#0062ff" />
+      <Line endX="-297.0" endY="-375.0" layoutX="584.0" layoutY="594.0" startX="-307.0" startY="-375.0" stroke="#0062ff" />
+      <Line endX="-287.0" endY="-360.0" layoutX="582.0" layoutY="593.0" startX="-293.0" startY="-371.0" stroke="#0062ff" />
+      <Line endX="-320.0" endY="-357.0" layoutX="584.0" layoutY="594.0" startX="-308.0" startY="-372.0" stroke="#0062ff" />
+      <Line endX="-331.0" endY="-341.0" layoutX="584.0" layoutY="594.0" startX="-321.0" startY="-357.0" stroke="#0062ff" />
+      <Line endX="-338.0" endY="-372.0" layoutX="584.0" layoutY="594.0" startX="-322.0" startY="-357.0" stroke="#0062ff" />
+      <Line endX="-352.0" endY="-398.0" layoutX="584.0" layoutY="594.0" startX="-338.0" startY="-374.0" stroke="#0062ff" />
+      <Line endX="-354.0" endY="-422.0" layoutX="584.0" layoutY="594.0" startX="-354.0" startY="-400.0" stroke="#0062ff" />
+      <Line endX="-367.0" endY="-433.0" layoutX="584.0" layoutY="598.0" startX="-355.0" startY="-425.0" stroke="#0062ff" />
+      <Line endX="-340.0" endY="-353.0" layoutX="584.0" layoutY="594.0" startX="-332.0" startY="-340.0" stroke="#0062ff" />
+      <Line endX="-372.0" endY="-352.0" layoutX="584.0" layoutY="594.0" startX="-356.0" startY="-338.0" stroke="#0062ff" />
+      <Line endX="-352.0" endY="-336.0" layoutX="584.0" layoutY="592.0" startX="-337.0" startY="-336.0" stroke="#0062ff" />
+      <Line endX="-401.0" endY="-396.0" layoutX="584.0" layoutY="594.0" startX="-374.0" startY="-354.0" stroke="#0062ff" />
+      <Line endX="-411.70709228515625" endY="-371.0" layoutX="594.0" layoutY="604.0" startX="-382.70709228515625" startY="-362.70709228515625" stroke="#0062ff" />
+      <Line endX="-411.70709228515625" endY="-406.70709228515625" layoutX="590.0" layoutY="604.0" startX="-411.70709228515625" startY="-375.0" stroke="#0062ff" />
+      <Line endX="-414.0" endY="-436.0" layoutX="594.0" layoutY="604.0" startX="-414.0" startY="-411.0" stroke="#0062ff" />
+      <Line endX="-460.0" endY="-391.0" layoutX="594.0" layoutY="605.0" startX="-418.0" startY="-372.0" stroke="#0062ff" />
+      <Line endX="-426.0" endY="-380.0" layoutX="604.0" layoutY="615.0" startX="-426.0" startY="-353.0" stroke="#0062ff" />
+      <Line endX="-466.0" endY="-360.0" layoutX="604.0" layoutY="615.0" startX="-430.0" startY="-353.0" stroke="#0062ff" />
+      <Line endX="-427.0" endY="-348.0" layoutX="604.0" layoutY="615.0" startX="-439.0" startY="-321.0" stroke="#0062ff" />
+      <Line endX="-394.0" endY="-454.0" layoutX="604.0" layoutY="615.0" startX="-394.0" startY="-475.0" stroke="#0062ff" />
+      <Line endX="-310.0" endY="-399.0" layoutX="602.0" layoutY="615.0" startX="-310.0" startY="-415.0" stroke="#0062ff" />
+      <Line endX="-306.0" endY="-416.0" layoutX="604.0" layoutY="615.0" startX="-290.5" startY="-405.5" stroke="#0062ff" />
+      <Line endX="-304.70709228515625" endY="-422.5" layoutX="593.0" layoutY="666.0" startX="-299.0" startY="-430.0" stroke="#0062ff" />
+      <Line endX="-289.0" endY="-467.0" layoutX="603.0" layoutY="676.0" startX="-289.0" startY="-483.0" stroke="#0062ff" />
+      <Line endX="-326.0" endY="-505.0" layoutX="614.0" layoutY="625.0" startX="-320.0" startY="-428.0" stroke="#0062ff" />
+      <Line endX="-317.0" endY="-504.0" layoutX="616.0" layoutY="548.0" startX="-326.0" startY="-436.0" stroke="#0062ff" />
+      <Line endX="-324.0" endY="-451.0" layoutX="626.0" layoutY="558.0" startX="-335.0" startY="-443.0" stroke="#0062ff" />
+      <Line endX="-324.0" endY="-451.0" layoutX="636.0" layoutY="568.0" startX="-331.0" startY="-459.0" stroke="#0062ff" />
+      <Line endX="-300.0" endY="-478.0" layoutX="646.0" layoutY="578.0" startX="-324.0" startY="-465.0" stroke="#0062ff" />
+      <Line endX="-272.0" endY="-506.0" layoutX="656.0" layoutY="588.0" startX="-301.0" startY="-491.0" stroke="#0062ff" />
+      <Line endX="-278.0" endY="-517.0" layoutX="666.0" layoutY="598.0" startX="-278.0" startY="-472.0" stroke="#0062ff" />
+      <Line endX="-280.0" endY="-517.0" layoutX="597.0" layoutY="635.0" startX="-283.0" startY="-476.0" stroke="#0062ff" />
+      <Line endX="-282.70709228515625" endY="-519.2929077148438" layoutX="596.0" layoutY="679.0" startX="-282.0" startY="-486.5" stroke="#0062ff" />
+      <Line endX="-286.0" endY="-495.0" layoutX="606.0" layoutY="689.0" startX="-230.0" startY="-495.0" stroke="#0062ff" />
+      <Line endX="-297.0" endY="-535.0" layoutX="615.0" layoutY="696.0" startX="-269.0" startY="-535.0" stroke="#0062ff" />
+      <Line endX="-271.0" endY="-542.0" layoutX="625.0" layoutY="706.0" startX="-242.0" startY="-542.0" stroke="#0062ff" />
+      <Line endX="-246.0" endY="-551.0" layoutX="633.0" layoutY="716.0" startX="-246.0" startY="-585.0" stroke="#0062ff" />
+      <Line endX="-261.0" endY="-535.0" layoutX="643.0" layoutY="726.0" startX="-255.0" startY="-559.0" stroke="#0062ff" />
+      <Line endX="-264.0" endY="-567.0" layoutX="653.0" layoutY="732.0" startX="-249.0" startY="-567.0" stroke="#0062ff" />
+      <Line endX="-305.0" endY="-607.0" layoutX="663.0" layoutY="742.0" startX="-313.0" startY="-582.0" stroke="#0062ff" />
+      <Line endX="-322.0" endY="-651.0" layoutX="673.0" layoutY="752.0" startX="-314.0" startY="-627.0" stroke="#0062ff" />
+      <Line endX="-316.0" endY="-631.0" layoutX="683.0" layoutY="762.0" startX="-299.0" startY="-631.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to631" endX="-256.0" endY="-226.0" layoutX="478.0" layoutY="579.0" startX="-229.0" startY="-226.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to6311" endX="-270.0" endY="-241.0" layoutX="488.0" layoutY="589.0" startX="-270.0" startY="-273.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to63111" endX="-275.0" endY="-290.0" layoutX="498.0" layoutY="599.0" startX="-262.0" startY="-290.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to631111" endX="-275.0" endY="-290.0" layoutX="516.0" layoutY="600.0" startX="-262.0" startY="-290.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to6311111" endX="-346.0" endY="-318.0" layoutX="556.0" layoutY="631.0" startX="-356.0" startY="-318.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to63111111" endX="-319.0" endY="-337.0" layoutX="536.0" layoutY="620.0" startX="-319.0" startY="-319.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to63111112" endX="-315.0" endY="-289.0" layoutX="566.0" layoutY="641.0" startX="-315.0" startY="-329.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to631111121" endX="-286.0" endY="-328.0" layoutX="576.0" layoutY="651.0" startX="-315.0" startY="-341.0" stroke="#0062ff" />
+      <Line fx:id="lnEdge51to6311111211" endX="-335.0" endY="-406.0" layoutX="585.0" layoutY="664.0" startX="-326.0" startY="-357.0" stroke="#0062ff" />
    </children>
 </Pane>
